@@ -1,0 +1,178 @@
+// VecinoAI — Shared nav and footer
+// Works with file:// (local) and any web server (GitHub Pages, Vercel, etc.)
+
+(function () {
+  // ── Detectar profundidad relativa al directorio raíz del proyecto ──────────
+  function getBase() {
+    if (window.location.protocol !== 'file:') {
+      // En servidor web: rutas root-relativas con / al inicio
+      return null;
+    }
+    // En file:// calcular cuántos niveles subir hasta la raíz del proyecto
+    const path = decodeURIComponent(window.location.pathname);
+    const marker = 'vecinoai-web';
+    const idx = path.lastIndexOf(marker);
+    if (idx === -1) return '';
+    const afterRoot = path.slice(idx + marker.length).replace(/^\//, '');
+    const dirs = afterRoot.split('/').filter(p => p && !p.includes('.'));
+    return dirs.length === 0 ? '' : '../'.repeat(dirs.length);
+  }
+
+  const base = getBase(); // null = servidor, string = file://
+
+  // Construye una URL interna
+  function u(path) {
+    if (base === null) return '/' + path;
+    return base + path;
+  }
+
+  // ── Estilos compartidos ────────────────────────────────────────────────────
+  const STYLES = `<style>
+    *{box-sizing:border-box}
+    body{background:#080814;color:#f1f5f9;font-family:'Inter',sans-serif}
+    .glass{background:rgba(255,255,255,0.04);border:1px solid rgba(99,102,241,0.18);backdrop-filter:blur(16px)}
+    .gradient-text{background:linear-gradient(135deg,#a5b4fc 0%,#818cf8 40%,#c084fc 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .nav-blur{background:rgba(8,8,20,0.85);backdrop-filter:blur(20px);border-bottom:1px solid rgba(99,102,241,0.12)}
+    .btn-primary{background:linear-gradient(135deg,#6366f1,#4f46e5);color:white;padding:12px 28px;border-radius:10px;font-weight:600;font-size:15px;transition:all .2s ease;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+    .btn-primary:hover{transform:translateY(-1px);box-shadow:0 8px 30px rgba(99,102,241,0.4)}
+    .btn-ghost{border:1px solid rgba(99,102,241,0.3);color:#a5b4fc;padding:12px 28px;border-radius:10px;font-weight:500;font-size:15px;transition:all .2s ease;display:inline-flex;align-items:center;gap:8px;text-decoration:none}
+    .btn-ghost:hover{border-color:rgba(99,102,241,0.6);background:rgba(99,102,241,0.08);color:#c7d2fe}
+    .card-hover{transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+    .card-hover:hover{transform:translateY(-4px);border-color:rgba(99,102,241,0.4)!important;box-shadow:0 20px 60px rgba(99,102,241,0.12)}
+    .badge{background:rgba(99,102,241,0.12);border:1px solid rgba(99,102,241,0.25);color:#a5b4fc;padding:4px 14px;border-radius:999px;font-size:13px;font-weight:500;display:inline-flex;align-items:center;gap:6px}
+    .sep{border:none;border-top:1px solid rgba(99,102,241,0.1)}
+    .orb{position:absolute;border-radius:50%;filter:blur(80px);pointer-events:none}
+    .section-glow{background:radial-gradient(ellipse 60% 40% at 50% 50%,rgba(99,102,241,0.08) 0%,transparent 70%)}
+  </style>`;
+
+  // ── Nav ───────────────────────────────────────────────────────────────────
+  const NAV = `
+<nav class="nav-blur" style="position:fixed;top:0;left:0;right:0;z-index:50">
+  <div style="max-width:1280px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between">
+    <a href="${u('index.html')}" style="display:flex;align-items:center;gap:10px;text-decoration:none" aria-label="VecinoAI inicio">
+      <div style="width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#6366f1,#a855f7);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      </div>
+      <span style="font-weight:700;font-size:18px;color:white;letter-spacing:-0.5px">VecinoAI</span>
+    </a>
+    <div style="display:none;align-items:center;gap:32px;font-size:14px;font-weight:500" class="md-nav">
+      <a href="${u('how-it-works/index.html')}" style="color:#94a3b8;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#94a3b8'">Cómo funciona</a>
+      <a href="${u('amenity-reservations/index.html')}" style="color:#94a3b8;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#94a3b8'">Reservas</a>
+      <a href="${u('ai-knowledge-base/index.html')}" style="color:#94a3b8;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#94a3b8'">IA Contextual</a>
+      <a href="${u('blog/index.html')}" style="color:#94a3b8;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#94a3b8'">Blog</a>
+    </div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <a href="${u('demo/index.html')}" class="btn-ghost" style="font-size:14px;padding:10px 20px;display:none" id="nav-demo-ghost">Ver demo</a>
+      <a href="${u('demo/index.html')}" class="btn-primary" style="font-size:14px;padding:10px 20px">
+        Solicitar demo
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</nav>
+<style>
+  @media(min-width:768px){
+    .md-nav{display:flex!important}
+    #nav-demo-ghost{display:inline-flex!important}
+  }
+</style>`;
+
+  // ── Footer ────────────────────────────────────────────────────────────────
+  const FOOTER = `
+<footer style="border-top:1px solid rgba(255,255,255,0.05);padding:64px 0">
+  <div style="max-width:1280px;margin:0 auto;padding:0 24px">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:40px;margin-bottom:48px">
+
+      <div style="grid-column:span 2;min-width:200px">
+        <a href="${u('index.html')}" style="display:flex;align-items:center;gap:10px;text-decoration:none;margin-bottom:16px">
+          <div style="width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#6366f1,#a855f7);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <span style="font-weight:700;font-size:18px;color:white">VecinoAI</span>
+        </a>
+        <p style="color:#64748b;font-size:14px;line-height:1.7;max-width:280px;margin-bottom:12px">El asistente de inteligencia artificial para administración de propiedades residenciales. Un producto de CK Soluciones.</p>
+        <span style="color:#475569;font-size:12px">Un producto de <strong style="color:#94a3b8">CK Soluciones</strong></span>
+      </div>
+
+      <div>
+        <div style="color:white;font-weight:600;font-size:14px;margin-bottom:16px">Producto</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px">
+          ${[
+            ['how-it-works/index.html',              'Cómo funciona'],
+            ['whatsapp-property-management/index.html','WhatsApp IA'],
+            ['amenity-reservations/index.html',       'Reservas'],
+            ['resident-request-automation/index.html','Automatización'],
+            ['property-management-automation/index.html','Flujos de trabajo'],
+            ['ai-knowledge-base/index.html',          'Base de conocimiento IA'],
+            ['security/index.html',                   'Seguridad'],
+          ].map(([path, label]) =>
+            `<li><a href="${u(path)}" style="color:#64748b;font-size:14px;text-decoration:none" onmouseover="this.style.color='#cbd5e1'" onmouseout="this.style.color='#64748b'">${label}</a></li>`
+          ).join('\n          ')}
+        </ul>
+      </div>
+
+      <div>
+        <div style="color:white;font-weight:600;font-size:14px;margin-bottom:16px">Recursos</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px">
+          ${[
+            ['blog/index.html',                                       'Blog'],
+            ['blog/ai-for-property-management/index.html',           'IA para Administración'],
+            ['blog/automating-resident-requests/index.html',         'Automatizar Solicitudes'],
+            ['blog/whatsapp-for-residential-communities/index.html', 'WhatsApp Residencial'],
+            ['blog/digital-amenity-reservations/index.html',         'Reservas Digitales'],
+            ['ai-property-management/index.html',                    'IA Inmobiliaria'],
+            ['property-management-software/index.html',              'Software Administración'],
+          ].map(([path, label]) =>
+            `<li><a href="${u(path)}" style="color:#64748b;font-size:14px;text-decoration:none" onmouseover="this.style.color='#cbd5e1'" onmouseout="this.style.color='#64748b'">${label}</a></li>`
+          ).join('\n          ')}
+        </ul>
+      </div>
+
+      <div>
+        <div style="color:white;font-weight:600;font-size:14px;margin-bottom:16px">Empresa</div>
+        <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px">
+          ${[
+            ['about/index.html',           'Sobre CK Soluciones'],
+            ['contact/index.html',         'Contacto'],
+            ['demo/index.html',            'Solicitar demo'],
+            ['privacy-policy/index.html',  'Política de Privacidad'],
+            ['terms-and-conditions/index.html','Términos y Condiciones'],
+          ].map(([path, label]) =>
+            `<li><a href="${u(path)}" style="color:#64748b;font-size:14px;text-decoration:none" onmouseover="this.style.color='#cbd5e1'" onmouseout="this.style.color='#64748b'">${label}</a></li>`
+          ).join('\n          ')}
+        </ul>
+      </div>
+
+    </div>
+
+    <hr style="border:none;border-top:1px solid rgba(99,102,241,0.1);margin-bottom:32px"/>
+    <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;font-size:12px;color:#475569">
+      <div>© 2025 VecinoAI · CK Soluciones · Todos los derechos reservados</div>
+      <div style="display:flex;align-items:center;gap:24px;flex-wrap:wrap">
+        <a href="${u('privacy-policy/index.html')}"        style="color:#475569;text-decoration:none" onmouseover="this.style.color='#94a3b8'" onmouseout="this.style.color='#475569'">Privacidad</a>
+        <a href="${u('terms-and-conditions/index.html')}"  style="color:#475569;text-decoration:none" onmouseover="this.style.color='#94a3b8'" onmouseout="this.style.color='#475569'">Términos</a>
+        <a href="${u('property-management-software/index.html')}" style="color:#475569;text-decoration:none" onmouseover="this.style.color='#94a3b8'" onmouseout="this.style.color='#475569'">Software Administración</a>
+        <a href="${u('ai-property-management/index.html')}" style="color:#475569;text-decoration:none" onmouseover="this.style.color='#94a3b8'" onmouseout="this.style.color='#475569'">IA Inmobiliaria</a>
+      </div>
+    </div>
+  </div>
+</footer>`;
+
+  // ── Inyectar ──────────────────────────────────────────────────────────────
+  document.addEventListener('DOMContentLoaded', function () {
+    document.head.insertAdjacentHTML('beforeend', STYLES);
+
+    const navPh    = document.getElementById('nav-ph');
+    const footerPh = document.getElementById('footer-ph');
+    if (navPh)    navPh.outerHTML    = NAV;
+    if (footerPh) footerPh.outerHTML = FOOTER;
+
+    // Smooth scroll para anclas internas
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  });
+})();

@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="description" content="Solicita una demo personalizada de VecinoAI y descubre cómo la IA puede transformar la administración de tu comunidad residencial."/>
+  <meta name="robots" content="index, follow"/>
+  <link rel="canonical" href="https://vecinoai.co/demo"/>
+  <title>Solicita tu Demo de VecinoAI — Gratis y sin Compromiso | VecinoAI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','sans-serif']}}}}</script>
+  <style>*{box-sizing:border-box}body{background:#080814;color:#f1f5f9;font-family:'Inter',sans-serif;padding-top:72px}input:focus,textarea:focus,select:focus{border-color:rgba(99,102,241,0.6)!important;box-shadow:0 0 0 3px rgba(99,102,241,0.15)}select option{background:#1e1b4b;color:#f1f5f9}</style>
+</head>
+<body>
+<div id="nav-ph"></div>
+
+<!-- Hero -->
+<section style="padding:72px 24px 48px;text-align:center;background:linear-gradient(180deg,rgba(99,102,241,0.1) 0%,transparent 100%)">
+  <div style="max-width:720px;margin:0 auto">
+    <span style="display:inline-block;background:rgba(99,102,241,0.15);border:1px solid rgba(99,102,241,0.3);border-radius:999px;padding:6px 18px;font-size:13px;font-weight:600;color:#a5b4fc;margin-bottom:24px;letter-spacing:0.05em;text-transform:uppercase">Demo gratuita</span>
+    <h1 style="font-size:clamp(2rem,5vw,3.5rem);font-weight:900;line-height:1.1;margin:0 0 20px;background:linear-gradient(135deg,#f1f5f9 0%,#a5b4fc 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text">Solicita tu demo gratuita</h1>
+    <p style="font-size:1.1rem;color:#94a3b8;margin:0 auto;line-height:1.7;max-width:560px">Sin compromiso &nbsp;·&nbsp; Personalizada para tu comunidad &nbsp;·&nbsp; Respuesta en menos de 24 h</p>
+  </div>
+</section>
+
+<!-- Formulario + columna info -->
+<section style="padding:40px 24px 80px;max-width:1100px;margin:0 auto">
+  <div style="display:grid;grid-template-columns:1fr 400px;gap:48px;align-items:start">
+
+    <!-- Formulario -->
+    <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(99,102,241,0.25);border-radius:20px;padding:44px">
+      <h2 style="font-size:1.25rem;font-weight:700;margin:0 0 8px">Cuéntanos sobre tu comunidad</h2>
+      <p style="color:#64748b;font-size:0.9rem;margin:0 0 32px">Completar el formulario nos ayuda a preparar una demo relevante para tu caso específico.</p>
+
+      <!-- Mensaje de éxito (oculto hasta envío) -->
+      <div id="form-success" style="display:none;background:rgba(74,222,128,0.1);border:1px solid rgba(74,222,128,0.3);border-radius:12px;padding:28px;text-align:center">
+        <div style="width:52px;height:52px;background:rgba(74,222,128,0.2);border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 16px">
+          <svg width="26" height="26" fill="none" viewBox="0 0 24 24" stroke="#4ade80" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+        </div>
+        <h3 style="color:white;font-weight:800;font-size:1.2rem;margin:0 0 8px">¡Solicitud recibida!</h3>
+        <p style="color:#94a3b8;font-size:0.95rem;line-height:1.6;margin:0">Te contactaremos en menos de 24 horas para coordinar tu demo personalizada. Revisa también tu WhatsApp.</p>
+      </div>
+
+      <form id="demo-form" action="https://api.web3forms.com/submit" method="POST" style="display:flex;flex-direction:column;gap:20px">
+
+        <!-- Web3Forms config -->
+        <input type="hidden" name="access_key" value="__WEB3FORMS_KEY__"/>
+        <input type="hidden" name="subject" value="🏢 Nuevo lead — Demo VecinoAI"/>
+        <input type="hidden" name="from_name" value="VecinoAI Landing Page"/>
+        <input type="hidden" name="redirect" value="false"/>
+        <!-- Honeypot anti-spam -->
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off"/>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div>
+            <label style="display:block;color:#94a3b8;font-size:14px;font-weight:500;margin-bottom:6px">Nombre <span style="color:#f87171">*</span></label>
+            <input type="text" name="nombre" required placeholder="Tu nombre" style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(99,102,241,0.2);border-radius:8px;padding:12px 16px;color:white;font-size:14px;outline:none"/>
+          </div>
+          <div>
+            <label style="display:block;color:#94a3b8;font-size:14px;font-weight:500;margin-bottom:6px">Correo electrónico <span style="color:#f87171">*</span></label>
+            <input type="email" name="email" required placeholder="tu@correo.com" style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(99,102,241,0.2);border-radius:8px;padding:12px 16px;color:white;font-size:14px;outline:none"/>
+          </div>
+        </div>
+
+        <div>
+          <label style="display:block;color:#94a3b8;font-size:14px;font-weight:500;margin-bottom:6px">Teléfono / WhatsApp <span style="color:#f87171">*</span></label>
+          <input type="tel" name="telefono" required placeholder="+57 300 000 0000" style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(99,102,241,0.2);border-radius:8px;padding:12px 16px;color:white;font-size:14px;outline:none"/>
+        </div>
+
+        <div>
+          <label style="display:block;color:#94a3b8;font-size:14px;font-weight:500;margin-bottom:6px">Nombre de tu comunidad <span style="color:#f87171">*</span></label>
+          <input type="text" name="comunidad" required placeholder="Ej: Conjunto Residencial El Parque" style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(99,102,241,0.2);border-radius:8px;padding:12px 16px;color:white;font-size:14px;outline:none"/>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
+          <div>
+            <label style="display:block;color:#94a3b8;font-size:14px;font-weight:500;margin-bottom:6px">Número de apartamentos</label>
+            <select name="apartamentos" style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(99,102,241,0.2);border-radius:8px;padding:12px 16px;color:white;font-size:14px;outline:none;appearance:none;cursor:pointer">
+              <option value="" style="background:#1e1b4b">Seleccionar...</option>
+              <option value="1-50" style="background:#1e1b4b">1 – 50 unidades</option>
+              <option value="51-100" style="background:#1e1b4b">51 – 100 unidades</option>
+              <option value="101-200" style="background:#1e1b4b">101 – 200 unidades</option>
+              <option value="200+" style="background:#1e1b4b">Más de 200 unidades</option>
+            </select>
+          </div>
+          <div>
+            <label style="display:block;color:#94a3b8;font-size:14px;font-weight:500;margin-bottom:6px">Canal preferido</label>
+            <select name="canal" style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(99,102,241,0.2);border-radius:8px;padding:12px 16px;color:white;font-size:14px;outline:none;appearance:none;cursor:pointer">
+              <option value="" style="background:#1e1b4b">Seleccionar...</option>
+              <option value="whatsapp" style="background:#1e1b4b">WhatsApp</option>
+              <option value="email" style="background:#1e1b4b">Correo electrónico</option>
+              <option value="llamada" style="background:#1e1b4b">Llamada telefónica</option>
+            </select>
+          </div>
+        </div>
+
+        <div>
+          <label style="display:block;color:#94a3b8;font-size:14px;font-weight:500;margin-bottom:6px">Mensaje adicional (opcional)</label>
+          <textarea name="mensaje" rows="3" placeholder="¿Hay algo específico que quieras ver en la demo?" style="width:100%;background:rgba(255,255,255,0.05);border:1px solid rgba(99,102,241,0.2);border-radius:8px;padding:12px 16px;color:white;font-size:14px;outline:none;resize:vertical;font-family:inherit"></textarea>
+        </div>
+
+        <button id="submit-btn" type="submit" style="width:100%;background:linear-gradient(135deg,#6366f1,#8b5cf6);color:white;padding:16px 24px;border-radius:10px;font-weight:700;font-size:1.05rem;border:none;cursor:pointer;transition:all 0.2s;letter-spacing:0.01em;display:flex;align-items:center;justify-content:center;gap:10px">
+          <span id="btn-text">Solicitar demo gratuita →</span>
+          <svg id="btn-spinner" style="display:none;animation:spin 1s linear infinite" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+        </button>
+
+        <p style="color:#475569;font-size:12px;text-align:center;margin:0">Al solicitar, aceptas nuestra <a href="../privacy-policy/index.html" style="color:#a5b4fc;text-decoration:underline">Política de Privacidad</a>. Sin spam, prometido.</p>
+      </form>
+
+      <style>@keyframes spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}</style>
+      <script>
+        document.getElementById('demo-form').addEventListener('submit', async function(e) {
+          e.preventDefault();
+          const btn     = document.getElementById('submit-btn');
+          const btnText = document.getElementById('btn-text');
+          const spinner = document.getElementById('btn-spinner');
+          const success = document.getElementById('form-success');
+          const form    = this;
+
+          // Estado: cargando
+          btn.disabled = true;
+          btn.style.opacity = '0.75';
+          btnText.textContent = 'Enviando...';
+          spinner.style.display = 'inline-block';
+
+          try {
+            const data = Object.fromEntries(new FormData(form));
+            const res  = await fetch('https://api.web3forms.com/submit', {
+              method:  'POST',
+              headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+              body:    JSON.stringify(data),
+            });
+            const json = await res.json();
+
+            if (json.success) {
+              form.style.display   = 'none';
+              success.style.display = 'block';
+            } else {
+              throw new Error(json.message || 'Error al enviar');
+            }
+          } catch (err) {
+            btnText.textContent = 'Error — intenta de nuevo';
+            btn.style.background = 'linear-gradient(135deg,#dc2626,#b91c1c)';
+            btn.disabled = false;
+            spinner.style.display = 'none';
+            btn.style.opacity = '1';
+          }
+        });
+      </script>
+    </div>
+
+    <!-- Columna info -->
+    <div style="display:flex;flex-direction:column;gap:28px;position:sticky;top:90px">
+
+      <!-- Qué incluye la demo -->
+      <div style="background:rgba(99,102,241,0.07);border:1px solid rgba(99,102,241,0.2);border-radius:16px;padding:28px">
+        <h3 style="font-size:1.05rem;font-weight:700;margin:0 0 20px">¿Qué incluye la demo?</h3>
+        <div style="display:flex;flex-direction:column;gap:16px">
+          <div style="display:flex;align-items:flex-start;gap:14px">
+            <div style="width:36px;height:36px;background:rgba(99,102,241,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#a5b4fc" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div>
+              <div style="font-weight:600;font-size:0.9rem;margin-bottom:4px">Demostración en vivo</div>
+              <div style="color:#64748b;font-size:0.83rem;line-height:1.6">Verás a VecinoAI responder preguntas reales, gestionar reservas y escalar solicitudes, todo en tiempo real.</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px">
+            <div style="width:36px;height:36px;background:rgba(99,102,241,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#a5b4fc" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div>
+              <div style="font-weight:600;font-size:0.9rem;margin-bottom:4px">Configuración con tus documentos</div>
+              <div style="color:#64748b;font-size:0.83rem;line-height:1.6">Si nos envías tu reglamento antes, lo cargamos en la demo para que veas la IA responder sobre tu comunidad específica.</div>
+            </div>
+          </div>
+          <div style="display:flex;align-items:flex-start;gap:14px">
+            <div style="width:36px;height:36px;background:rgba(99,102,241,0.2);border-radius:8px;display:flex;align-items:center;justify-content:center;flex-shrink:0">
+              <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="#a5b4fc" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7"/></svg>
+            </div>
+            <div>
+              <div style="font-weight:600;font-size:0.9rem;margin-bottom:4px">Propuesta a medida</div>
+              <div style="color:#64748b;font-size:0.83rem;line-height:1.6">Al final de la demo recibirás un presupuesto personalizado según el tamaño y las necesidades de tu comunidad.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial -->
+      <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(99,102,241,0.15);border-radius:16px;padding:24px">
+        <div style="display:flex;gap:4px;margin-bottom:12px">
+          <svg width="16" height="16" fill="#fbbf24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="16" height="16" fill="#fbbf24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="16" height="16" fill="#fbbf24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="16" height="16" fill="#fbbf24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg width="16" height="16" fill="#fbbf24" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <p style="color:#94a3b8;font-size:0.88rem;line-height:1.7;margin:0 0 16px;font-style:italic">"La demo nos convenció en 20 minutos. Pudimos ver al asistente responder preguntas sobre nuestro propio reglamento. Increíble."</p>
+        <div style="font-size:0.85rem">
+          <div style="font-weight:600">Carlos M.</div>
+          <div style="color:#64748b">Administrador, Conjunto Residencial Bogotá</div>
+        </div>
+      </div>
+
+      <!-- WhatsApp CTA -->
+      <a href="https://wa.me/573000000000?text=Hola%2C%20quiero%20solicitar%20una%20demo%20de%20VecinoAI" target="_blank" rel="noopener" style="display:flex;align-items:center;justify-content:center;gap:12px;background:#25D366;color:white;padding:14px 24px;border-radius:12px;font-weight:700;font-size:0.95rem;text-decoration:none;transition:opacity 0.2s" onmouseover="this.style.opacity='0.9'" onmouseout="this.style.opacity='1'">
+        <svg width="22" height="22" fill="white" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Chatear ahora por WhatsApp
+      </a>
+
+      <!-- Links internos -->
+      <div style="text-align:center;font-size:0.88rem;color:#64748b">
+        ¿Aún tienes dudas? Lee
+        <a href="../how-it-works/index.html" style="color:#a5b4fc;text-decoration:underline">cómo funciona</a>
+        o descubre la
+        <a href="../ai-property-management/index.html" style="color:#a5b4fc;text-decoration:underline">gestión con IA</a>.
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div id="footer-ph"></div>
+<script src="../assets/js/shared.js"></script>
+</body>
+</html>

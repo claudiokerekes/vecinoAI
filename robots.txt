@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Excluir páginas legales del índice de Google
+Disallow: /privacy-policy
+Disallow: /terms-and-conditions
+
+# Sitemap
+Sitemap: https://vecinoai.co/sitemap.xml
