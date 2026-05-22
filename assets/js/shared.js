@@ -1,5 +1,79 @@
-// VecinoAI — Shared nav and footer
+// VecinoAI — Shared nav, footer, analytics
 // Works with file:// (local) and any web server (GitHub Pages, Vercel, etc.)
+
+// ── Google Analytics 4 ────────────────────────────────────────────────────────
+(function () {
+  var GA_ID = '__GA4_ID__';
+  if (!GA_ID || GA_ID === '__GA4_ID__') return;
+  var s = document.createElement('script');
+  s.async = true;
+  s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+  document.head.appendChild(s);
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){ window.dataLayer.push(arguments); }
+  window.gtag = gtag;
+  gtag('js', new Date());
+  gtag('config', GA_ID, { send_page_view: true });
+})();
+
+// ── Facebook Pixel ────────────────────────────────────────────────────────────
+(function () {
+  var FB_ID = '__FACEBOOK_PIXEL_ID__';
+  if (!FB_ID || FB_ID === '__FACEBOOK_PIXEL_ID__') return; // sin ID aún
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  window.fbq('init', FB_ID);
+  window.fbq('track', 'PageView');
+})();
+
+// ── Scroll depth (25 / 50 / 75 / 100 %) ─────────────────────────────────────
+(function () {
+  var reached = {};
+  var depths  = [25, 50, 75, 100];
+  function check() {
+    var el        = document.documentElement;
+    var scrolled  = el.scrollTop || document.body.scrollTop;
+    var total     = el.scrollHeight - el.clientHeight;
+    if (total <= 0) return;
+    var pct = Math.round((scrolled / total) * 100);
+    depths.forEach(function (d) {
+      if (pct >= d && !reached[d]) {
+        reached[d] = true;
+        if (window.gtag) {
+          window.gtag('event', 'scroll', {
+            percent_scrolled: d,
+            page_path: window.location.pathname
+          });
+        }
+        if (window.fbq && d === 50) window.fbq('track', 'ViewContent');
+      }
+    });
+  }
+  window.addEventListener('scroll', check, { passive: true });
+})();
+
+// ── Tracking helper ───────────────────────────────────────────────────────────
+function trackEvent(eventName, params) {
+  if (window.gtag) window.gtag('event', eventName, params || {});
+  if (window.fbq) {
+    if (eventName === 'whatsapp_click')  window.fbq('track', 'Contact');
+    if (eventName === 'form_submit_demo') window.fbq('track', 'Lead');
+  }
+}
+window.trackEvent = trackEvent;
+
+// ── Tracking: clics en WhatsApp (delegación desde document) ──────────────────
+document.addEventListener('click', function (e) {
+  var a = e.target.closest('a[href*="wa.me"]');
+  if (!a) return;
+  trackEvent('whatsapp_click', {
+    event_category: 'conversion',
+    event_label: a.dataset.label || window.location.pathname
+  });
+});
 
 (function () {
   // ── Detectar profundidad relativa al directorio raíz del proyecto ──────────
