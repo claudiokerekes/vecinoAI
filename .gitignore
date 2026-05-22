@@ -2,3 +2,6 @@
 .env
 dev.sh
 .DS_Store
+
+# Dependencias
+node_modules/

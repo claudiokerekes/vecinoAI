@@ -3,8 +3,7 @@
 
 // ── Google Analytics 4 ────────────────────────────────────────────────────────
 (function () {
-  var GA_ID = '__GA4_ID__';
-  if (!GA_ID || GA_ID === '__GA4_ID__') return;
+  var GA_ID = 'G-SWFT48PG3Z';
   var s = document.createElement('script');
   s.async = true;
   s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;

@@ -1,127 +1,1226 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <meta name="description" content="Términos y condiciones de uso de VecinoAI — CK Soluciones. Condiciones aplicables al servicio de asistencia IA para administración de propiedades."/>
-  <meta name="robots" content="noindex, follow"/>
-  <link rel="canonical" href="https://vecinoai.co/terms-and-conditions"/>
-  <title>Términos y Condiciones — VecinoAI | VecinoAI</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
-  <script>tailwind.config={theme:{extend:{fontFamily:{sans:['Inter','sans-serif']}}}}</script>
-  <style>*{box-sizing:border-box}body{background:#080814;color:#f1f5f9;font-family:'Inter',sans-serif;padding-top:72px}h2{font-size:1.25rem;font-weight:700;margin:40px 0 16px;color:#f1f5f9}h3{font-size:1rem;font-weight:700;margin:24px 0 10px;color:#e2e8f0}p,li{color:#94a3b8;line-height:1.8;font-size:0.95rem}ul,ol{margin:12px 0;padding-left:20px;display:flex;flex-direction:column;gap:6px}a{color:#a5b4fc;text-decoration:underline}</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="VecinoAI — El asistente de inteligencia artificial para administración de propiedades. Automatiza la comunicación con residentes, gestiona solicitudes y reservas desde WhatsApp y una plataforma centralizada." />
+  <meta name="keywords" content="software administración de propiedades, IA administración inmobiliaria, WhatsApp administración de propiedades, automatización comunicación residentes, software HOA, software comunidades residenciales, software reservas amenidades, IA condominio" />
+  <link rel="canonical" href="https://vecinoai.co/" />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="VecinoAI — IA para Administración de Propiedades" />
+  <meta property="og:description" content="Automatiza la comunicación con residentes, gestiona solicitudes y reservas con inteligencia artificial." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://vecinoai.co/" />
+  <meta property="og:site_name" content="VecinoAI" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="VecinoAI — IA para Administración de Propiedades" />
+  <meta name="twitter:description" content="Automatiza la comunicación con residentes, gestiona solicitudes y reservas con inteligencia artificial." />
+  <title>VecinoAI — El asistente de IA para administración de propiedades</title>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "VecinoAI",
+    "description": "El asistente de inteligencia artificial para administración de propiedades residenciales. Automatiza la comunicación con residentes, gestiona solicitudes y reservas desde WhatsApp.",
+    "url": "https://vecinoai.co",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Web, WhatsApp",
+    "offers": {"@type": "Offer", "availability": "https://schema.org/InStock"},
+    "publisher": {
+      "@type": "Organization",
+      "name": "CK Soluciones",
+      "url": "https://vecinoai.co",
+      "contactPoint": {"@type": "ContactPoint", "contactType": "sales", "email": "demo@vecinoai.co"}
+    },
+    "featureList": [
+      "Automatización de solicitudes de residentes",
+      "Soporte por WhatsApp con IA",
+      "Reservas de amenidades inteligentes",
+      "Base de conocimiento RAG",
+      "Comunicación omnicanal"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "VecinoAI",
+    "url": "https://vecinoai.co",
+    "description": "IA para administración de propiedades residenciales",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://vecinoai.co/blog?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: { sans: ['Inter', 'sans-serif'] },
+          colors: {
+            brand: {
+              50:  '#eef2ff',
+              100: '#e0e7ff',
+              200: '#c7d2fe',
+              400: '#818cf8',
+              500: '#6366f1',
+              600: '#4f46e5',
+              700: '#4338ca',
+            },
+            surface: {
+              DEFAULT: '#0d0d1a',
+              card:    '#12122a',
+              border:  'rgba(99,102,241,0.18)',
+            },
+          },
+          backgroundImage: {
+            'hero-radial': 'radial-gradient(ellipse 80% 60% at 50% -10%, rgba(99,102,241,0.25) 0%, transparent 70%)',
+            'card-glow':   'radial-gradient(ellipse 60% 50% at 50% 0%, rgba(99,102,241,0.12) 0%, transparent 70%)',
+          },
+        },
+      },
+    }
+  </script>
+  <style>
+    * { box-sizing: border-box; }
+    body { background-color: #080814; color: #f1f5f9; font-family: 'Inter', sans-serif; }
+
+    /* Glassmorphism */
+    .glass {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(99,102,241,0.18);
+      backdrop-filter: blur(16px);
+    }
+    .glass-green {
+      background: rgba(37,211,102,0.06);
+      border: 1px solid rgba(37,211,102,0.2);
+      backdrop-filter: blur(12px);
+    }
+
+    /* Gradients */
+    .gradient-text {
+      background: linear-gradient(135deg, #a5b4fc 0%, #818cf8 40%, #c084fc 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .gradient-text-green {
+      background: linear-gradient(135deg, #4ade80 0%, #25D366 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-glow {
+      background: radial-gradient(ellipse 80% 60% at 50% -5%, rgba(99,102,241,0.28) 0%, transparent 70%);
+    }
+    .section-glow {
+      background: radial-gradient(ellipse 60% 40% at 50% 50%, rgba(99,102,241,0.08) 0%, transparent 70%);
+    }
+
+    /* Nav blur */
+    .nav-blur {
+      background: rgba(8,8,20,0.85);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(99,102,241,0.12);
+    }
+
+    /* Button styles */
+    .btn-primary {
+      background: linear-gradient(135deg, #6366f1, #4f46e5);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 0 0 0 rgba(99,102,241,0);
+    }
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 30px rgba(99,102,241,0.4);
+    }
+    .btn-whatsapp {
+      background: linear-gradient(135deg, #25D366, #128C7E);
+      color: white;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-weight: 600;
+      font-size: 15px;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-whatsapp:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 8px 30px rgba(37,211,102,0.35);
+    }
+    .btn-ghost {
+      border: 1px solid rgba(99,102,241,0.3);
+      color: #a5b4fc;
+      padding: 12px 28px;
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 15px;
+      transition: all 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-ghost:hover {
+      border-color: rgba(99,102,241,0.6);
+      background: rgba(99,102,241,0.08);
+      color: #c7d2fe;
+    }
+
+    /* Card hover */
+    .card-hover {
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+    }
+    .card-hover:hover {
+      transform: translateY(-4px);
+      border-color: rgba(99,102,241,0.4) !important;
+      box-shadow: 0 20px 60px rgba(99,102,241,0.12);
+    }
+
+    /* Chat bubble */
+    .chat-in {
+      background: rgba(37,211,102,0.12);
+      border: 1px solid rgba(37,211,102,0.2);
+      border-radius: 18px 18px 18px 4px;
+    }
+    .chat-out {
+      background: rgba(99,102,241,0.15);
+      border: 1px solid rgba(99,102,241,0.25);
+      border-radius: 18px 18px 4px 18px;
+    }
+    .chat-ai {
+      background: linear-gradient(135deg, rgba(99,102,241,0.15), rgba(139,92,246,0.1));
+      border: 1px solid rgba(99,102,241,0.25);
+      border-radius: 18px 18px 18px 4px;
+    }
+
+    /* Typing animation */
+    @keyframes blink { 0%,100% { opacity:0.2; } 50% { opacity:1; } }
+    .dot { animation: blink 1.4s infinite; }
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+
+    /* Step line */
+    .step-line {
+      position: absolute;
+      left: 19px;
+      top: 44px;
+      bottom: -20px;
+      width: 2px;
+      background: linear-gradient(to bottom, rgba(99,102,241,0.5), transparent);
+    }
+
+    /* Badge */
+    .badge {
+      background: rgba(99,102,241,0.12);
+      border: 1px solid rgba(99,102,241,0.25);
+      color: #a5b4fc;
+      padding: 4px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 500;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .badge-green {
+      background: rgba(37,211,102,0.08);
+      border: 1px solid rgba(37,211,102,0.2);
+      color: #4ade80;
+    }
+
+    /* Separator */
+    .sep { border: none; border-top: 1px solid rgba(99,102,241,0.1); }
+
+    /* Smooth reveal (simple) */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+
+    /* WhatsApp pulse */
+    @keyframes pulse-green {
+      0%   { box-shadow: 0 0 0 0 rgba(37,211,102,0.5); }
+      70%  { box-shadow: 0 0 0 12px rgba(37,211,102,0); }
+      100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+    }
+    .wa-pulse { animation: pulse-green 2s infinite; }
+
+    /* Floating glow orb */
+    .orb {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(80px);
+      pointer-events: none;
+    }
+
+    /* Integration pill */
+    .integration-pill {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      transition: all 0.2s;
+    }
+    .integration-pill:hover {
+      border-color: rgba(99,102,241,0.35);
+      background: rgba(99,102,241,0.06);
+    }
+  </style>
+  <link rel="stylesheet" href="assets/css/tailwind.css"/>
+  <link rel="stylesheet" href="../assets/css/tailwind.css"/>
 </head>
 <body>
-<div id="nav-ph"></div>
 
-<main style="max-width:760px;margin:0 auto;padding:64px 24px 96px">
+<!-- ============================================================ -->
+<!-- NAVBAR -->
+<!-- ============================================================ -->
+<nav class="nav-blur fixed top-0 left-0 right-0 z-50">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+    <!-- Logo -->
+    <a href="index.html" class="flex items-center gap-2.5" aria-label="VecinoAI inicio">
+      <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+        </svg>
+      </div>
+      <span class="font-bold text-lg text-white tracking-tight">VecinoAI</span>
+    </a>
 
-  <!-- Cabecera -->
-  <div style="margin-bottom:48px">
-    <span style="font-size:12px;font-weight:700;color:#6366f1;text-transform:uppercase;letter-spacing:0.08em">Documento legal</span>
-    <h1 style="font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;margin:12px 0 16px">Términos y Condiciones</h1>
-    <div style="display:flex;align-items:center;gap:16px;flex-wrap:wrap">
-      <span style="color:#64748b;font-size:0.9rem">Última actualización: <strong style="color:#94a3b8">Mayo 2025</strong></span>
-      <span style="color:#334155;font-size:0.9rem">|</span>
-      <span style="color:#64748b;font-size:0.9rem">Proveedor: <strong style="color:#94a3b8">CK Soluciones S.A.S.</strong></span>
+    <!-- Nav links (desktop) -->
+    <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-400">
+      <a href="how-it-works/index.html" class="hover:text-white transition-colors">Cómo funciona</a>
+      <a href="amenity-reservations/index.html" class="hover:text-white transition-colors">Reservas</a>
+      <a href="ai-knowledge-base/index.html" class="hover:text-white transition-colors">IA Contextual</a>
+      <a href="blog/index.html" class="hover:text-white transition-colors">Blog</a>
     </div>
-    <div style="margin-top:20px;background:rgba(99,102,241,0.07);border-left:3px solid #6366f1;border-radius:0 8px 8px 0;padding:16px 20px">
-      <p style="margin:0;color:#94a3b8;font-size:0.9rem">Estos Términos y Condiciones regulan el acceso y el uso de los servicios de VecinoAI, ofrecidos por CK Soluciones S.A.S. Al contratar o usar el servicio, el Cliente declara haber leído, comprendido y aceptado íntegramente estas condiciones.</p>
+
+    <!-- CTA -->
+    <div class="flex items-center gap-3">
+      <a href="#demo" class="hidden sm:inline-flex btn-ghost text-sm py-2.5 px-5">Ver demo</a>
+      <a href="#demo" class="btn-primary text-sm py-2.5 px-5">
+        Solicitar demo
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
     </div>
   </div>
+</nav>
 
-  <!-- 1. Objeto -->
-  <h2>1. Objeto</h2>
-  <p>El presente documento establece las condiciones de uso de <strong style="color:#f1f5f9">VecinoAI</strong>, el asistente de inteligencia artificial para la administración de propiedades horizontales, desarrollado y operado por <strong style="color:#f1f5f9">CK Soluciones S.A.S.</strong> (en adelante, "el Proveedor").</p>
-  <p>VecinoAI comprende el asistente conversacional accesible por WhatsApp, correo electrónico y chat web, que centraliza las solicitudes, reservas, comunicaciones y la base de conocimiento de la comunidad.</p>
+<!-- ============================================================ -->
+<!-- HERO -->
+<!-- ============================================================ -->
+<section class="relative min-h-screen flex items-center pt-24 pb-20 overflow-hidden">
+  <!-- Background orbs -->
+  <div class="orb w-[600px] h-[600px] bg-brand-500/20 -top-40 left-1/2 -translate-x-1/2"></div>
+  <div class="orb w-[400px] h-[400px] bg-purple-600/15 top-1/2 -right-32"></div>
+  <div class="orb w-[300px] h-[300px] bg-brand-500/10 bottom-0 -left-20"></div>
+  <div class="hero-glow absolute inset-0"></div>
 
-  <!-- 2. Partes -->
-  <h2>2. Partes del contrato</h2>
-  <ul>
-    <li><strong style="color:#e2e8f0">El Proveedor:</strong> CK Soluciones S.A.S., empresa colombiana proveedora del servicio VecinoAI.</li>
-    <li><strong style="color:#e2e8f0">El Cliente:</strong> El administrador de la propiedad horizontal, la empresa administradora o la persona jurídica que contrata el servicio en nombre de la copropiedad.</li>
-    <li><strong style="color:#e2e8f0">Los Usuarios finales:</strong> Los residentes, propietarios y demás personas autorizadas por el Cliente para interactuar con VecinoAI. El Cliente es responsable de garantizar que los Usuarios finales conozcan y respeten estas condiciones.</li>
-  </ul>
+  <div class="max-w-7xl mx-auto px-6 relative z-10 w-full">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
 
-  <!-- 3. Acceso al servicio -->
-  <h2>3. Acceso y activación del servicio</h2>
-  <p>El acceso al servicio se activa una vez que el Cliente ha suscrito el contrato de prestación de servicios correspondiente, realizado el primer pago y completado el proceso de onboarding con el equipo de CK Soluciones. El Cliente recibirá las credenciales de acceso al panel de administración de VecinoAI y la configuración del número de WhatsApp Business de la comunidad.</p>
-  <p>El Cliente es el único responsable de mantener la confidencialidad de sus credenciales de acceso y de todas las acciones realizadas desde su cuenta.</p>
+      <!-- Left: Copy -->
+      <div>
+        <div class="badge mb-6">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          Potenciado por IA — CK Soluciones
+        </div>
 
-  <!-- 4. Uso aceptable -->
-  <h2>4. Uso aceptable de la plataforma</h2>
-  <p>El Cliente y los Usuarios finales se comprometen a usar VecinoAI de forma lícita y respetuosa. Queda expresamente prohibido:</p>
-  <ul>
-    <li>Usar la plataforma para enviar contenido ilegal, difamatorio, discriminatorio, obsceno o que viole los derechos de terceros.</li>
-    <li>Intentar acceder sin autorización a los sistemas, servidores o datos de otras copropiedades.</li>
-    <li>Realizar ingeniería inversa, descompilar o intentar extraer el código fuente de VecinoAI.</li>
-    <li>Usar el servicio para enviar comunicaciones masivas no solicitadas (spam).</li>
-    <li>Cargar documentos que contengan información falsa, maliciosa o que viole derechos de propiedad intelectual de terceros.</li>
-    <li>Intentar evadir o desactivar los mecanismos de seguridad de la plataforma.</li>
-    <li>Suplantar la identidad de otro residente, administrador o del propio Proveedor.</li>
-  </ul>
-  <p>El Proveedor se reserva el derecho de suspender o cancelar el acceso al servicio ante cualquier incumplimiento de estas condiciones, sin perjuicio de las acciones legales que correspondan.</p>
+        <h1 class="text-5xl lg:text-6xl font-black leading-[1.05] tracking-tight mb-6">
+          El asistente de<br>
+          <span class="gradient-text">IA para administración</span><br>
+          de propiedades
+        </h1>
 
-  <!-- 5. Disponibilidad -->
-  <h2>5. Disponibilidad del servicio</h2>
-  <p>El Proveedor se compromete a mantener una disponibilidad del servicio del <strong style="color:#f1f5f9">99,0 % mensual</strong>, medida como uptime del sistema, excluyendo ventanas de mantenimiento programado (que se notificarán con al menos 48 horas de anticipación) y eventos de fuerza mayor.</p>
-  <p>En caso de interrupciones no programadas que superen dicho umbral, el Cliente podrá solicitar créditos de servicio conforme al acuerdo de nivel de servicio (SLA) establecido en el contrato específico.</p>
+        <p class="text-slate-400 text-lg leading-relaxed mb-8 max-w-lg">
+          VecinoAI ayuda a comunidades residenciales y administradores a automatizar la comunicación con residentes, gestionar solicitudes y manejar reservas desde <strong class="text-green-400">WhatsApp</strong> y una plataforma centralizada.
+        </p>
 
-  <!-- 6. Propiedad intelectual -->
-  <h2>6. Propiedad intelectual</h2>
-  <h3>6.1 Del Proveedor</h3>
-  <p>VecinoAI, sus logotipos, el código fuente, los modelos de inteligencia artificial, la interfaz de usuario, los algoritmos y toda la tecnología asociada son propiedad exclusiva de CK Soluciones S.A.S. o de sus licenciantes. Estos Términos no otorgan al Cliente ningún derecho de propiedad sobre dichos elementos, más allá de la licencia de uso limitada, no exclusiva e intransferible para acceder al servicio durante la vigencia del contrato.</p>
+        <div class="flex flex-wrap gap-3 mb-10">
+          <a href="#demo" class="btn-primary">
+            Solicitar demo
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="https://wa.me/573145678786" target="_blank" rel="noopener" class="btn-whatsapp">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            Hablar con VecinoAI
+          </a>
+          <a href="#como-funciona" class="btn-ghost">
+            Ver cómo funciona
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          </a>
+        </div>
 
-  <h3>6.2 Del Cliente</h3>
-  <p>Los documentos cargados en la base de conocimiento (reglamentos, actas, circulares, etc.), los datos de los residentes y los contenidos generados por la comunidad son propiedad del Cliente o de la copropiedad que representa. El Proveedor no adquiere ningún derecho de propiedad sobre dichos contenidos y los usa exclusivamente para prestar el servicio contratado.</p>
+        <!-- Stats -->
+        <div class="flex flex-wrap gap-8">
+          <div>
+            <div class="text-2xl font-bold text-white">24/7</div>
+            <div class="text-xs text-slate-500 mt-0.5">Atención automática</div>
+          </div>
+          <div class="border-l border-slate-800 pl-8">
+            <div class="text-2xl font-bold text-white">-70%</div>
+            <div class="text-xs text-slate-500 mt-0.5">Carga operativa</div>
+          </div>
+          <div class="border-l border-slate-800 pl-8">
+            <div class="text-2xl font-bold text-white">&lt;2 min</div>
+            <div class="text-xs text-slate-500 mt-0.5">Tiempo de respuesta</div>
+          </div>
+        </div>
+      </div>
 
-  <!-- 7. Datos personales -->
-  <h2>7. Tratamiento de datos personales</h2>
-  <p>El tratamiento de datos personales de los residentes y administradores se rige por la <a href="../privacy-policy/index.html">Política de Privacidad</a> de VecinoAI y por la normativa colombiana aplicable (Ley 1581 de 2012). El Cliente actúa como responsable del tratamiento de los datos de los residentes de su comunidad; el Proveedor actúa como encargado del tratamiento en nombre del Cliente.</p>
+      <!-- Right: Chat mockup -->
+      <div class="relative lg:block">
+        <!-- Phone frame -->
+        <div class="glass rounded-3xl p-1 shadow-2xl shadow-brand-500/20 max-w-sm mx-auto">
+          <!-- WhatsApp header -->
+          <div class="bg-gradient-to-r from-[#075E54] to-[#128C7E] rounded-t-2xl px-4 py-3 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-brand-500 flex items-center justify-center text-white font-bold text-sm">VA</div>
+            <div>
+              <div class="text-white font-semibold text-sm">VecinoAI</div>
+              <div class="text-green-200 text-xs flex items-center gap-1">
+                <span class="w-1.5 h-1.5 rounded-full bg-green-400 inline-block"></span>
+                En línea
+              </div>
+            </div>
+            <div class="ml-auto flex gap-3 text-white/70">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.77 9.73a19.79 19.79 0 01-3.07-8.67A2 2 0 012.68 2h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 9.5a16 16 0 006.59 6.59l1.87-1.87a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="1"/><circle cx="19" cy="12" r="1"/><circle cx="5" cy="12" r="1"/></svg>
+            </div>
+          </div>
 
-  <!-- 8. Limitación de responsabilidad -->
-  <h2>8. Limitación de responsabilidad</h2>
-  <p>En la máxima medida permitida por la ley aplicable:</p>
-  <ul>
-    <li>El Proveedor no será responsable por daños indirectos, incidentales, especiales o consecuentes que resulten del uso o la imposibilidad de uso del servicio.</li>
-    <li>La responsabilidad total del Proveedor frente al Cliente no superará el importe pagado por el Cliente en los <strong style="color:#f1f5f9">3 meses anteriores</strong> al evento que origina la reclamación.</li>
-    <li>El Proveedor no garantiza que VecinoAI sea infalible ni que sus respuestas sean siempre completas o jurídicamente vinculantes. Las respuestas del asistente son de carácter informativo y no reemplazan el asesoramiento legal, contable o profesional especializado.</li>
-    <li>El Proveedor no es responsable por el contenido de los documentos cargados por el Cliente ni por las decisiones tomadas por los administradores basadas en la información proporcionada por el asistente.</li>
-  </ul>
+          <!-- Chat area -->
+          <div class="bg-[#0b1418] rounded-b-2xl p-4 space-y-3 min-h-[420px]">
+            <!-- Timestamp -->
+            <div class="text-center text-xs text-slate-600 my-2">Hoy 09:14</div>
 
-  <!-- 9. Facturación y pago -->
-  <h2>9. Facturación y condiciones de pago</h2>
-  <p>El servicio se factura de forma mensual o anual según el plan contratado. El Cliente recibirá la factura al inicio de cada período de facturación. El pago debe realizarse dentro de los 5 días hábiles siguientes a la fecha de facturación. El retraso en el pago puede resultar en la suspensión temporal del servicio. Las condiciones específicas de precios, descuentos y promociones se establecen en el contrato individual suscrito con cada Cliente.</p>
+            <!-- Resident message -->
+            <div class="flex justify-end">
+              <div class="chat-out px-4 py-2.5 max-w-[80%]">
+                <p class="text-sm text-slate-200">Buenos días, ¿el salón comunal está disponible el sábado a las 6pm?</p>
+                <span class="text-xs text-slate-500 mt-1 block text-right">09:14 ✓✓</span>
+              </div>
+            </div>
 
-  <!-- 10. Vigencia y terminación -->
-  <h2>10. Vigencia y terminación</h2>
-  <p>El contrato entra en vigor en la fecha de activación del servicio y permanece vigente hasta que cualquiera de las partes lo termine de conformidad con las condiciones pactadas. Cualquiera de las partes puede terminar el contrato con un preaviso escrito de <strong style="color:#f1f5f9">30 días</strong>. Ante incumplimiento grave de estos Términos, el Proveedor puede terminar el contrato de forma inmediata. Tras la terminación, el Cliente tiene 30 días para exportar sus datos.</p>
+            <!-- Typing indicator -->
+            <div class="flex items-center gap-2">
+              <div class="w-7 h-7 rounded-full bg-brand-500 flex items-center justify-center text-white text-xs font-bold flex-shrink-0">VA</div>
+              <div class="chat-ai px-4 py-2.5">
+                <p class="text-sm text-slate-200">¡Hola! Consultando disponibilidad...</p>
+              </div>
+            </div>
 
-  <!-- 11. Modificaciones -->
-  <h2>11. Modificaciones a los Términos</h2>
-  <p>El Proveedor se reserva el derecho de modificar estos Términos. Los cambios materiales se notificarán al Cliente con al menos <strong style="color:#f1f5f9">30 días de anticipación</strong> por correo electrónico. Si el Cliente continúa usando el servicio después de la fecha de vigencia de los nuevos Términos, se entenderá que los acepta. Si el Cliente no está de acuerdo con los cambios, puede terminar el contrato conforme a la cláusula 10.</p>
+            <!-- AI response -->
+            <div class="flex items-start gap-2">
+              <div class="w-7 h-7 rounded-full bg-brand-500 flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mt-1">VA</div>
+              <div class="chat-ai px-4 py-3 max-w-[85%]">
+                <p class="text-sm text-slate-200 leading-relaxed">✅ <strong>Sábado 24 mayo, 6:00 PM</strong><br>El Salón Comunal <span class="text-green-400 font-medium">está disponible</span>.<br><br>📋 Según el reglamento interno (Art. 15), la reserva requiere:<br>• Pago del depósito: $50.000<br>• Máx. 50 personas<br>• Hasta las 11:00 PM<br><br>¿Deseas confirmar la reserva ahora?</p>
+                <span class="text-xs text-slate-500 mt-2 block">09:14 · VecinoAI</span>
+              </div>
+            </div>
 
-  <!-- 12. Ley aplicable -->
-  <h2>12. Ley aplicable y resolución de controversias</h2>
-  <p>Estos Términos y Condiciones se rigen e interpretan exclusivamente por las <strong style="color:#f1f5f9">leyes de la República de Colombia</strong>. Cualquier controversia derivada de o relacionada con este contrato se someterá en primer lugar a un proceso de negociación directa entre las partes (30 días). De no resolverse, las partes se someterán a la jurisdicción de los jueces y tribunales competentes de la ciudad de <strong style="color:#f1f5f9">Bogotá D. C., Colombia</strong>, renunciando a cualquier otro fuero que pudiera corresponderles.</p>
+            <!-- Resident reply -->
+            <div class="flex justify-end">
+              <div class="chat-out px-4 py-2.5 max-w-[80%]">
+                <p class="text-sm text-slate-200">Sí, quiero confirmar la reserva 🙌</p>
+                <span class="text-xs text-slate-500 mt-1 block text-right">09:15 ✓✓</span>
+              </div>
+            </div>
 
-  <!-- 13. Contacto -->
-  <h2>13. Contacto legal</h2>
-  <p>Para consultas o notificaciones relacionadas con estos Términos y Condiciones:</p>
-  <div style="background:rgba(255,255,255,0.03);border:1px solid rgba(99,102,241,0.15);border-radius:12px;padding:20px;margin-top:12px">
-    <p style="margin:0"><strong style="color:#f1f5f9">CK Soluciones S.A.S. — Departamento Legal</strong><br/>
-    Correo: <a href="mailto:legal@vecinoai.co">legal@vecinoai.co</a><br/>
-    Sitio web: <a href="https://vecinoai.co">vecinoai.co</a></p>
+            <!-- Final AI -->
+            <div class="flex items-start gap-2">
+              <div class="w-7 h-7 rounded-full bg-brand-500 flex items-center justify-center text-white text-xs font-bold flex-shrink-0 mt-1">VA</div>
+              <div class="chat-ai px-4 py-3 max-w-[85%]">
+                <p class="text-sm text-slate-200 leading-relaxed">🎉 <strong>¡Reserva confirmada!</strong><br>Recibirás el comprobante en breve. El administrador ha sido notificado.</p>
+                <span class="text-xs text-slate-500 mt-2 block">09:15 · VecinoAI</span>
+              </div>
+            </div>
+
+            <!-- Input bar -->
+            <div class="flex items-center gap-2 mt-4 pt-3 border-t border-white/5">
+              <div class="flex-1 bg-white/5 rounded-full px-4 py-2 text-xs text-slate-500">Escribe un mensaje...</div>
+              <div class="w-8 h-8 rounded-full bg-green-500 flex items-center justify-center flex-shrink-0">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating badges -->
+        <div class="absolute -top-4 -right-4 glass rounded-xl px-4 py-2.5 text-xs font-medium text-green-400 flex items-center gap-2 shadow-lg">
+          <span class="w-2 h-2 rounded-full bg-green-400 wa-pulse"></span>
+          WhatsApp activo
+        </div>
+        <div class="absolute -bottom-4 -left-4 glass rounded-xl px-4 py-2.5 text-xs font-medium text-brand-400 flex items-center gap-2 shadow-lg">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+          IA contextual activada
+        </div>
+      </div>
+
+    </div>
   </div>
+</section>
 
-  <div style="margin-top:48px;padding-top:32px;border-top:1px solid rgba(99,102,241,0.15);text-align:center">
-    <p style="color:#475569;font-size:0.85rem;margin:0">Términos y Condiciones — VecinoAI / CK Soluciones S.A.S. &nbsp;|&nbsp; Versión: Mayo 2025</p>
+<!-- ============================================================ -->
+<!-- TRUST / SOCIAL PROOF -->
+<!-- ============================================================ -->
+<section class="py-14 border-y border-white/5">
+  <div class="max-w-7xl mx-auto px-6">
+    <p class="text-center text-sm text-slate-500 mb-8 tracking-widest uppercase font-medium">Equipos modernos de administración usan VecinoAI</p>
+    <div class="flex flex-wrap justify-center items-center gap-x-12 gap-y-6">
+      <!-- Logos como texto estilizado (reemplazar con logos reales) -->
+      <div class="text-slate-600 font-bold text-lg tracking-tight">Torres del Parque</div>
+      <div class="w-px h-5 bg-slate-800 hidden sm:block"></div>
+      <div class="text-slate-600 font-bold text-lg tracking-tight">Conjunto Residencial Los Andes</div>
+      <div class="w-px h-5 bg-slate-800 hidden sm:block"></div>
+      <div class="text-slate-600 font-bold text-lg tracking-tight">Ciudadela Norte</div>
+      <div class="w-px h-5 bg-slate-800 hidden sm:block"></div>
+      <div class="text-slate-600 font-bold text-lg tracking-tight">Administraciones CK</div>
+      <div class="w-px h-5 bg-slate-800 hidden sm:block"></div>
+      <div class="text-slate-600 font-bold text-lg tracking-tight">VecinoAI</div>
+    </div>
   </div>
+</section>
 
-</main>
+<!-- ============================================================ -->
+<!-- PROBLEMS / FEATURES -->
+<!-- ============================================================ -->
+<section id="funcionalidades" class="py-24 relative overflow-hidden">
+  <div class="section-glow absolute inset-0"></div>
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-16">
+      <div class="badge mb-4">Funcionalidades</div>
+      <h2 class="text-4xl lg:text-5xl font-black text-white leading-tight mb-4">
+        Todo lo que tu comunidad<br>
+        <span class="gradient-text">necesita, automatizado</span>
+      </h2>
+      <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+        No es un chatbot genérico. VecinoAI está entrenado específicamente para administración de propiedades residenciales.
+      </p>
+    </div>
 
-<div id="footer-ph"></div>
-<script src="../assets/js/shared.js"></script>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+
+      <!-- Card 1 -->
+      <div class="glass rounded-2xl p-6 card-hover cursor-default">
+        <div class="w-11 h-11 rounded-xl bg-brand-500/15 border border-brand-500/25 flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+        </div>
+        <h3 class="text-white font-bold text-lg mb-2">Solicitudes automatizadas</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Clasifica, categoriza y responde solicitudes de residentes automáticamente. Cero intervención manual para casos estándar.</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="glass rounded-2xl p-6 card-hover cursor-default glass-green">
+        <div class="w-11 h-11 rounded-xl bg-green-500/15 border border-green-500/25 flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#4ade80"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </div>
+        <h3 class="text-white font-bold text-lg mb-2">Soporte WhatsApp con IA</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Los residentes interactúan directamente desde WhatsApp. La IA responde, escala y gestiona sin fricción.</p>
+        <div class="badge badge-green mt-4 text-xs">Canal principal</div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="glass rounded-2xl p-6 card-hover cursor-default">
+        <div class="w-11 h-11 rounded-xl bg-purple-500/15 border border-purple-500/25 flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        </div>
+        <h3 class="text-white font-bold text-lg mb-2">Reservas inteligentes</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Consulta disponibilidad, realiza reservas de áreas comunes y gestiona aprobaciones conversacionalmente.</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="glass rounded-2xl p-6 card-hover cursor-default">
+        <div class="w-11 h-11 rounded-xl bg-amber-500/15 border border-amber-500/25 flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        </div>
+        <h3 class="text-white font-bold text-lg mb-2">Respuestas normativas</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">La IA consulta el reglamento de propiedad horizontal, documentos internos y políticas de la comunidad para dar respuestas precisas.</p>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="glass rounded-2xl p-6 card-hover cursor-default">
+        <div class="w-11 h-11 rounded-xl bg-cyan-500/15 border border-cyan-500/25 flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3 class="text-white font-bold text-lg mb-2">Comunicación omnicanal</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Centraliza WhatsApp, email y plataforma web en un solo lugar. Historial unificado por residente.</p>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="glass rounded-2xl p-6 card-hover cursor-default">
+        <div class="w-11 h-11 rounded-xl bg-rose-500/15 border border-rose-500/25 flex items-center justify-center mb-5">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <h3 class="text-white font-bold text-lg mb-2">Automatización de flujos</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Clasificación automática de tickets, respuestas sugeridas por IA, enrutamiento inteligente y flujos de trabajo automatizados.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- HOW IT WORKS -->
+<!-- ============================================================ -->
+<section id="como-funciona" class="py-24 border-y border-white/5">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-16 items-start">
+
+      <!-- Left: Steps -->
+      <div>
+        <div class="badge mb-4">Cómo funciona</div>
+        <h2 class="text-4xl font-black text-white leading-tight mb-4">
+          De la pregunta del residente<br>
+          <span class="gradient-text">a la respuesta en segundos</span>
+        </h2>
+        <p class="text-slate-400 mb-10">Un flujo conversacional inteligente que entiende el contexto de tu comunidad.</p>
+
+        <div class="space-y-6">
+
+          <!-- Step 1 -->
+          <div class="flex gap-4 relative">
+            <div class="relative flex-shrink-0">
+              <div class="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center text-white font-bold text-sm z-10 relative">1</div>
+              <div class="step-line"></div>
+            </div>
+            <div class="pb-6">
+              <h3 class="font-bold text-white mb-1">El residente hace una pregunta</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Desde WhatsApp, la web o el email. Sin apps adicionales, sin registros complicados.</p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex gap-4 relative">
+            <div class="relative flex-shrink-0">
+              <div class="w-10 h-10 rounded-full bg-brand-500/70 flex items-center justify-center text-white font-bold text-sm z-10 relative">2</div>
+              <div class="step-line"></div>
+            </div>
+            <div class="pb-6">
+              <h3 class="font-bold text-white mb-1">VecinoAI comprende el contexto</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Identifica la intención, el tipo de solicitud y el historial del residente.</p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex gap-4 relative">
+            <div class="relative flex-shrink-0">
+              <div class="w-10 h-10 rounded-full bg-brand-500/50 flex items-center justify-center text-white font-bold text-sm z-10 relative">3</div>
+              <div class="step-line"></div>
+            </div>
+            <div class="pb-6">
+              <h3 class="font-bold text-white mb-1">Consulta reglamentos y documentos</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Busca en el reglamento de la comunidad, políticas internas y bases de conocimiento configuradas.</p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex gap-4 relative">
+            <div class="relative flex-shrink-0">
+              <div class="w-10 h-10 rounded-full bg-brand-500/30 flex items-center justify-center text-white font-bold text-sm z-10 relative">4</div>
+              <div class="step-line"></div>
+            </div>
+            <div class="pb-6">
+              <h3 class="font-bold text-white mb-1">Genera la respuesta correcta</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Responde con información precisa, cita la fuente y ofrece los siguientes pasos.</p>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="flex gap-4">
+            <div class="flex-shrink-0">
+              <div class="w-10 h-10 rounded-full bg-brand-500/15 border border-brand-500/30 flex items-center justify-center text-brand-400 font-bold text-sm">5</div>
+            </div>
+            <div>
+              <h3 class="font-bold text-white mb-1">Escala si es necesario</h3>
+              <p class="text-slate-400 text-sm leading-relaxed">Si el caso lo requiere, notifica al administrador con el contexto completo ya documentado.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Right: Dashboard preview mockup -->
+      <div class="glass rounded-2xl overflow-hidden shadow-2xl shadow-brand-500/10">
+        <!-- Top bar -->
+        <div class="bg-white/5 border-b border-white/5 px-5 py-3 flex items-center gap-2">
+          <span class="w-3 h-3 rounded-full bg-red-500/60"></span>
+          <span class="w-3 h-3 rounded-full bg-yellow-500/60"></span>
+          <span class="w-3 h-3 rounded-full bg-green-500/60"></span>
+          <span class="ml-4 text-xs text-slate-500 font-mono">vecinoai.co — Conversaciones</span>
+        </div>
+
+        <!-- Dashboard content -->
+        <div class="p-5 space-y-3">
+          <div class="flex items-center justify-between mb-2">
+            <span class="text-white font-semibold text-sm">Bandeja de solicitudes</span>
+            <span class="badge text-xs">127 activas</span>
+          </div>
+
+          <!-- Ticket rows -->
+          <div class="bg-brand-500/10 border border-brand-500/20 rounded-xl p-3 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center flex-shrink-0">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="#4ade80"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="text-white text-xs font-medium">Reserva Salón Comunal — Carlos M.</div>
+              <div class="text-slate-500 text-xs">Respondido automáticamente · hace 2 min</div>
+            </div>
+            <span class="text-xs text-green-400 bg-green-500/10 px-2 py-1 rounded-full flex-shrink-0">Resuelto</span>
+          </div>
+
+          <div class="bg-white/3 border border-white/5 rounded-xl p-3 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-amber-500/20 flex items-center justify-center flex-shrink-0">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="text-white text-xs font-medium">Daño en zona de parqueadero — Apt 302</div>
+              <div class="text-slate-500 text-xs">Escalado a mantenimiento · hace 15 min</div>
+            </div>
+            <span class="text-xs text-amber-400 bg-amber-500/10 px-2 py-1 rounded-full flex-shrink-0">En proceso</span>
+          </div>
+
+          <div class="bg-white/3 border border-white/5 rounded-xl p-3 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-brand-500/20 flex items-center justify-center flex-shrink-0">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="text-white text-xs font-medium">¿Cuándo es la próxima asamblea? — Apt 108</div>
+              <div class="text-slate-500 text-xs">IA respondiendo automáticamente...</div>
+            </div>
+            <span class="text-xs text-brand-400 bg-brand-500/10 px-2 py-1 rounded-full flex-shrink-0">IA activa</span>
+          </div>
+
+          <div class="bg-white/3 border border-white/5 rounded-xl p-3 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-cyan-500/20 flex items-center justify-center flex-shrink-0">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            </div>
+            <div class="flex-1 min-w-0">
+              <div class="text-white text-xs font-medium">Solicitud cuota de administración — Apt 215</div>
+              <div class="text-slate-500 text-xs">Vía email · hace 32 min</div>
+            </div>
+            <span class="text-xs text-cyan-400 bg-cyan-500/10 px-2 py-1 rounded-full flex-shrink-0">Nuevo</span>
+          </div>
+
+          <!-- Stats row -->
+          <div class="grid grid-cols-3 gap-3 pt-2">
+            <div class="bg-white/3 rounded-xl p-3 text-center">
+              <div class="text-xl font-bold text-white">94%</div>
+              <div class="text-xs text-slate-500 mt-0.5">Auto-resuelto</div>
+            </div>
+            <div class="bg-white/3 rounded-xl p-3 text-center">
+              <div class="text-xl font-bold text-white">1.8 min</div>
+              <div class="text-xs text-slate-500 mt-0.5">Resp. promedio</div>
+            </div>
+            <div class="bg-white/3 rounded-xl p-3 text-center">
+              <div class="text-xl font-bold text-green-400">24/7</div>
+              <div class="text-xs text-slate-500 mt-0.5">Disponible</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- INTEGRATIONS -->
+<!-- ============================================================ -->
+<section class="py-24">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-14">
+      <div class="badge mb-4">Integraciones y canales</div>
+      <h2 class="text-4xl font-black text-white leading-tight mb-4">
+        Todo conectado,<br><span class="gradient-text">todo centralizado</span>
+      </h2>
+      <p class="text-slate-400 text-lg max-w-xl mx-auto">Un ecosistema completo para gestionar tu comunidad desde cualquier canal.</p>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 max-w-4xl mx-auto">
+
+      <div class="integration-pill">
+        <div class="w-10 h-10 rounded-xl bg-green-500/15 flex items-center justify-center flex-shrink-0">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </div>
+        <div>
+          <div class="text-white font-semibold text-sm">WhatsApp Business</div>
+          <div class="text-slate-500 text-xs mt-0.5">Canal principal de atención</div>
+        </div>
+      </div>
+
+      <div class="integration-pill">
+        <div class="w-10 h-10 rounded-xl bg-brand-500/15 flex items-center justify-center flex-shrink-0">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        </div>
+        <div>
+          <div class="text-white font-semibold text-sm">Email</div>
+          <div class="text-slate-500 text-xs mt-0.5">Comunicación formal</div>
+        </div>
+      </div>
+
+      <div class="integration-pill">
+        <div class="w-10 h-10 rounded-xl bg-cyan-500/15 flex items-center justify-center flex-shrink-0">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#22d3ee" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+        </div>
+        <div>
+          <div class="text-white font-semibold text-sm">Portal web</div>
+          <div class="text-slate-500 text-xs mt-0.5">Plataforma VecinoAI</div>
+        </div>
+      </div>
+
+      <div class="integration-pill">
+        <div class="w-10 h-10 rounded-xl bg-amber-500/15 flex items-center justify-center flex-shrink-0">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+        </div>
+        <div>
+          <div class="text-white font-semibold text-sm">Documentos internos</div>
+          <div class="text-slate-500 text-xs mt-0.5">Reglamentos y políticas</div>
+        </div>
+      </div>
+
+      <div class="integration-pill">
+        <div class="w-10 h-10 rounded-xl bg-purple-500/15 flex items-center justify-center flex-shrink-0">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </div>
+        <div>
+          <div class="text-white font-semibold text-sm">Base de conocimiento IA</div>
+          <div class="text-slate-500 text-xs mt-0.5">RAG y contexto inteligente</div>
+        </div>
+      </div>
+
+      <div class="integration-pill">
+        <div class="w-10 h-10 rounded-xl bg-rose-500/15 flex items-center justify-center flex-shrink-0">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f87171" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 010 8h-1"/><path d="M2 8h16v9a4 4 0 01-4 4H6a4 4 0 01-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+        </div>
+        <div>
+          <div class="text-white font-semibold text-sm">Normativa legal</div>
+          <div class="text-slate-500 text-xs mt-0.5">Propiedad horizontal</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- RESERVAS -->
+<!-- ============================================================ -->
+<section id="reservas" class="py-24 border-y border-white/5 relative overflow-hidden">
+  <div class="orb w-[500px] h-[500px] bg-purple-600/10 top-0 right-0"></div>
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="grid lg:grid-cols-2 gap-16 items-center">
+
+      <!-- Left: Reservation UI mockup -->
+      <div class="glass rounded-2xl overflow-hidden shadow-2xl shadow-purple-500/10">
+        <!-- Header -->
+        <div class="bg-gradient-to-r from-purple-900/60 to-brand-900/60 border-b border-white/5 px-5 py-4">
+          <div class="flex items-center justify-between">
+            <div>
+              <div class="text-white font-semibold">Reservas de Áreas Comunes</div>
+              <div class="text-slate-400 text-xs mt-0.5">Salón Comunal · Piscina · Cancha · BBQ</div>
+            </div>
+            <div class="badge text-xs">Mayo 2025</div>
+          </div>
+        </div>
+
+        <!-- Calendar grid -->
+        <div class="p-5">
+          <!-- Week header -->
+          <div class="grid grid-cols-7 gap-1 mb-2">
+            <div class="text-center text-xs text-slate-600 font-medium py-1">Lu</div>
+            <div class="text-center text-xs text-slate-600 font-medium py-1">Ma</div>
+            <div class="text-center text-xs text-slate-600 font-medium py-1">Mi</div>
+            <div class="text-center text-xs text-slate-600 font-medium py-1">Ju</div>
+            <div class="text-center text-xs text-slate-600 font-medium py-1">Vi</div>
+            <div class="text-center text-xs text-slate-600 font-medium py-1">Sá</div>
+            <div class="text-center text-xs text-slate-600 font-medium py-1">Do</div>
+          </div>
+          <!-- Calendar days -->
+          <div class="grid grid-cols-7 gap-1 mb-4">
+            <div class="text-center text-xs text-slate-600 py-2 rounded-lg"></div>
+            <div class="text-center text-xs text-slate-400 py-2 rounded-lg hover:bg-white/5 cursor-pointer">1</div>
+            <div class="text-center text-xs text-slate-400 py-2 rounded-lg hover:bg-white/5 cursor-pointer">2</div>
+            <div class="text-center text-xs text-slate-400 py-2 rounded-lg hover:bg-white/5 cursor-pointer">3</div>
+            <div class="text-center text-xs text-green-400 py-2 rounded-lg bg-green-500/10 cursor-pointer font-medium">4</div>
+            <div class="text-center text-xs text-red-400 py-2 rounded-lg bg-red-500/10 cursor-pointer">5</div>
+            <div class="text-center text-xs text-red-400 py-2 rounded-lg bg-red-500/10 cursor-pointer">6</div>
+            <div class="text-center text-xs text-slate-400 py-2 rounded-lg hover:bg-white/5 cursor-pointer">7</div>
+            <div class="text-center text-xs text-slate-400 py-2 rounded-lg hover:bg-white/5 cursor-pointer">8</div>
+            <div class="text-center text-xs text-slate-400 py-2 rounded-lg hover:bg-white/5 cursor-pointer">9</div>
+            <div class="text-center text-xs text-slate-400 py-2 rounded-lg hover:bg-white/5 cursor-pointer">10</div>
+            <div class="text-center text-xs text-green-400 py-2 rounded-lg bg-green-500/10 cursor-pointer font-medium">11</div>
+            <div class="text-center text-xs text-red-400 py-2 rounded-lg bg-red-500/10 cursor-pointer">12</div>
+            <div class="text-center text-xs text-red-400 py-2 rounded-lg bg-red-500/10 cursor-pointer">13</div>
+            <div class="text-center text-xs text-slate-400 py-2 rounded-lg hover:bg-white/5 cursor-pointer">14</div>
+            <div class="text-center text-xs text-slate-400 py-2 rounded-lg hover:bg-white/5 cursor-pointer">15</div>
+            <div class="text-center text-xs text-slate-400 py-2 rounded-lg hover:bg-white/5 cursor-pointer">16</div>
+            <div class="text-center text-xs text-slate-400 py-2 rounded-lg hover:bg-white/5 cursor-pointer">17</div>
+            <div class="text-center text-xs text-brand-400 py-2 rounded-lg bg-brand-500/15 border border-brand-500/30 cursor-pointer font-bold">18</div>
+            <div class="text-center text-xs text-red-400 py-2 rounded-lg bg-red-500/10 cursor-pointer">19</div>
+            <div class="text-center text-xs text-red-400 py-2 rounded-lg bg-red-500/10 cursor-pointer">20</div>
+          </div>
+
+          <!-- Legend -->
+          <div class="flex items-center gap-4 text-xs text-slate-500 mb-4">
+            <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-green-500/20 inline-block"></span>Disponible</span>
+            <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-red-500/20 inline-block"></span>Ocupado</span>
+            <span class="flex items-center gap-1.5"><span class="w-3 h-3 rounded bg-brand-500/20 inline-block"></span>Tu reserva</span>
+          </div>
+
+          <!-- Selected slot -->
+          <div class="bg-brand-500/10 border border-brand-500/25 rounded-xl p-4">
+            <div class="flex items-center justify-between mb-3">
+              <div>
+                <div class="text-white font-semibold text-sm">Salón Comunal</div>
+                <div class="text-slate-400 text-xs">Sábado 18 de mayo · 6:00 PM – 11:00 PM</div>
+              </div>
+              <span class="text-green-400 text-xs font-medium bg-green-500/10 px-2 py-1 rounded-full">Confirmada</span>
+            </div>
+            <div class="flex items-center gap-2 text-xs text-slate-500">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+              Máx. 50 personas · Depósito: $50.000
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Copy -->
+      <div>
+        <div class="badge mb-4">Reservas inteligentes</div>
+        <h2 class="text-4xl font-black text-white leading-tight mb-4">
+          Reservas de amenidades<br>
+          <span class="gradient-text">desde WhatsApp</span>
+        </h2>
+        <p class="text-slate-400 text-lg leading-relaxed mb-8">
+          Los residentes consultan disponibilidad, hacen reservas y reciben confirmaciones conversacionalmente. Sin formularios, sin llamadas, sin fricciones.
+        </p>
+
+        <div class="space-y-4 mb-8">
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 rounded-full bg-brand-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <div class="text-white font-medium text-sm">Consulta de disponibilidad en tiempo real</div>
+              <div class="text-slate-500 text-xs mt-0.5">El residente pregunta y recibe la disponibilidad instantáneamente.</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 rounded-full bg-brand-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <div class="text-white font-medium text-sm">Confirmación automática con reglamento incluido</div>
+              <div class="text-slate-500 text-xs mt-0.5">La IA informa las reglas aplicables en el mismo mensaje.</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 rounded-full bg-brand-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <div class="text-white font-medium text-sm">Aprobaciones y notificaciones automáticas</div>
+              <div class="text-slate-500 text-xs mt-0.5">El administrador aprueba con un clic; el residente es notificado.</div>
+            </div>
+          </div>
+          <div class="flex items-start gap-3">
+            <div class="w-6 h-6 rounded-full bg-brand-500 flex items-center justify-center flex-shrink-0 mt-0.5">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <div>
+              <div class="text-white font-medium text-sm">Historial y reportes por área</div>
+              <div class="text-slate-500 text-xs mt-0.5">Panel con ocupación, reservas activas y cancelaciones.</div>
+            </div>
+          </div>
+        </div>
+
+        <a href="#demo" class="btn-primary inline-flex">
+          Ver demo de reservas
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- AI KNOWLEDGE LAYER -->
+<!-- ============================================================ -->
+<section id="ia-knowledge" class="py-24 relative overflow-hidden">
+  <div class="orb w-[600px] h-[600px] bg-brand-500/8 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"></div>
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <div class="text-center mb-16">
+      <div class="badge mb-4">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        IA Contextual
+      </div>
+      <h2 class="text-4xl lg:text-5xl font-black text-white leading-tight mb-4">
+        Una IA que conoce<br>
+        <span class="gradient-text">tu comunidad</span>
+      </h2>
+      <p class="text-slate-400 text-lg max-w-2xl mx-auto">
+        No es un chatbot genérico. VecinoAI está entrenado con los documentos, reglamentos y políticas específicas de tu comunidad.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6 mb-12">
+
+      <div class="glass rounded-2xl p-6 text-center card-hover">
+        <div class="w-14 h-14 rounded-2xl bg-brand-500/15 border border-brand-500/25 flex items-center justify-center mx-auto mb-4">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
+        </div>
+        <h3 class="text-white font-bold mb-2">Reglamentos subidos</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Sube el reglamento de propiedad horizontal, actas de asamblea y circulares. La IA los entiende y los cita.</p>
+      </div>
+
+      <div class="glass rounded-2xl p-6 text-center card-hover" style="border-color: rgba(99,102,241,0.35);">
+        <div class="w-14 h-14 rounded-2xl bg-purple-500/15 border border-purple-500/25 flex items-center justify-center mx-auto mb-4">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        </div>
+        <h3 class="text-white font-bold mb-2">RAG — Retrieval Augmented Generation</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">La IA busca en tus documentos antes de responder. Cita la fuente exacta. Sin alucinaciones.</p>
+        <div class="badge mt-4 text-xs mx-auto inline-flex">Tecnología de punta</div>
+      </div>
+
+      <div class="glass rounded-2xl p-6 text-center card-hover">
+        <div class="w-14 h-14 rounded-2xl bg-amber-500/15 border border-amber-500/25 flex items-center justify-center mx-auto mb-4">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+        </div>
+        <h3 class="text-white font-bold mb-2">Marco legal de propiedad horizontal</h3>
+        <p class="text-slate-400 text-sm leading-relaxed">Incluye leyes y normativas de administración de propiedades para respuestas legalmente respaldadas.</p>
+      </div>
+
+    </div>
+
+    <!-- Knowledge source pills -->
+    <div class="glass rounded-2xl p-6 max-w-3xl mx-auto">
+      <div class="text-sm text-slate-400 mb-4 font-medium">Fuentes de conocimiento activas:</div>
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-brand-500/10 border border-brand-500/20 text-brand-300 text-xs px-3 py-1.5 rounded-full">📋 Reglamento de Propiedad Horizontal</span>
+        <span class="bg-green-500/10 border border-green-500/20 text-green-300 text-xs px-3 py-1.5 rounded-full">📁 Manual de Convivencia</span>
+        <span class="bg-purple-500/10 border border-purple-500/20 text-purple-300 text-xs px-3 py-1.5 rounded-full">📊 Políticas de Reservas</span>
+        <span class="bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs px-3 py-1.5 rounded-full">⚖️ Ley 675 - Propiedad Horizontal</span>
+        <span class="bg-cyan-500/10 border border-cyan-500/20 text-cyan-300 text-xs px-3 py-1.5 rounded-full">🏗️ Normas de Construcción</span>
+        <span class="bg-rose-500/10 border border-rose-500/20 text-rose-300 text-xs px-3 py-1.5 rounded-full">📅 Actas de Asamblea</span>
+        <span class="bg-slate-500/10 border border-slate-500/20 text-slate-300 text-xs px-3 py-1.5 rounded-full">+ Documentos personalizados</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- BENEFITS -->
+<!-- ============================================================ -->
+<section class="py-24 border-t border-white/5">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="text-center mb-16">
+      <div class="badge mb-4">Resultados</div>
+      <h2 class="text-4xl font-black text-white leading-tight mb-4">
+        Transforma la experiencia<br>
+        <span class="gradient-text">de tu comunidad</span>
+      </h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-16">
+      <div class="glass rounded-2xl p-6 text-center card-hover">
+        <div class="text-4xl font-black gradient-text mb-2">-70%</div>
+        <div class="text-white font-semibold mb-1">Carga operativa</div>
+        <div class="text-slate-500 text-sm">Menos trabajo manual para el equipo administrativo</div>
+      </div>
+      <div class="glass rounded-2xl p-6 text-center card-hover">
+        <div class="text-4xl font-black gradient-text mb-2">&lt;2 min</div>
+        <div class="text-white font-semibold mb-1">Tiempo de respuesta</div>
+        <div class="text-slate-500 text-sm">Frente a horas o días con gestión tradicional</div>
+      </div>
+      <div class="glass rounded-2xl p-6 text-center card-hover">
+        <div class="text-4xl font-black text-green-400 mb-2">24/7</div>
+        <div class="text-white font-semibold mb-1">Soporte continuo</div>
+        <div class="text-slate-500 text-sm">Sin fines de semana, sin festivos, sin horarios</div>
+      </div>
+      <div class="glass rounded-2xl p-6 text-center card-hover">
+        <div class="text-4xl font-black gradient-text mb-2">100%</div>
+        <div class="text-white font-semibold mb-1">Trazabilidad</div>
+        <div class="text-slate-500 text-sm">Cada solicitud documentada y auditada automáticamente</div>
+      </div>
+    </div>
+
+    <!-- Testimonial -->
+    <div class="glass rounded-2xl p-8 max-w-3xl mx-auto text-center" style="border-color: rgba(99,102,241,0.3);">
+      <div class="flex justify-center mb-4">
+        <div class="flex gap-1">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#fbbf24"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+        </div>
+      </div>
+      <blockquote class="text-slate-200 text-lg leading-relaxed mb-6 italic">
+        "Antes tardábamos días en responder solicitudes de reserva. Ahora VecinoAI las gestiona en minutos, con toda la información del reglamento incluida. Los residentes están mucho más satisfechos."
+      </blockquote>
+      <div class="flex items-center justify-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-brand-500 flex items-center justify-center text-white font-bold text-sm">ML</div>
+        <div class="text-left">
+          <div class="text-white font-semibold text-sm">María López</div>
+          <div class="text-slate-500 text-xs">Administradora · Conjunto Residencial Los Andes</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- FINAL CTA -->
+<!-- ============================================================ -->
+<section id="demo" class="py-28 relative overflow-hidden">
+  <div class="orb w-[700px] h-[700px] bg-brand-500/15 top-1/2 -translate-y-1/2 left-1/2 -translate-x-1/2"></div>
+  <div class="max-w-4xl mx-auto px-6 text-center relative z-10">
+    <div class="badge mb-6 mx-auto inline-flex">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      Comienza hoy
+    </div>
+    <h2 class="text-5xl lg:text-6xl font-black text-white leading-tight mb-6">
+      Transforma la administración<br>de tu propiedad con <span class="gradient-text">IA</span>
+    </h2>
+    <p class="text-slate-400 text-xl leading-relaxed mb-10 max-w-2xl mx-auto">
+      Únete a las comunidades residenciales que ya automatizan su comunicación, reservas y gestión con inteligencia artificial.
+    </p>
+    <div class="flex flex-wrap gap-4 justify-center mb-8">
+      <a href="mailto:demo@vecinoai.co" class="btn-primary text-base px-8 py-4">
+        Solicitar demo gratuita
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+      <a href="https://wa.me/573145678786" target="_blank" rel="noopener" class="btn-whatsapp text-base px-8 py-4">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Hablar con VecinoAI
+      </a>
+    </div>
+    <p class="text-slate-600 text-sm">Sin compromisos · Demo personalizada · Respuesta en menos de 24 h</p>
+  </div>
+</section>
+
+<!-- ============================================================ -->
+<!-- FOOTER -->
+<!-- ============================================================ -->
+<footer class="border-t border-white/5 py-16">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-2 md:grid-cols-5 gap-10 mb-12">
+
+      <!-- Brand -->
+      <div class="col-span-2">
+        <div class="flex items-center gap-2.5 mb-4">
+          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-brand-500 to-purple-500 flex items-center justify-center">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+            </svg>
+          </div>
+          <span class="font-bold text-lg text-white">VecinoAI</span>
+        </div>
+        <p class="text-slate-500 text-sm leading-relaxed mb-4 max-w-xs">
+          El asistente de inteligencia artificial para administración de propiedades residenciales. Un producto de CK Soluciones.
+        </p>
+        <div class="flex items-center gap-2 text-xs text-slate-600">
+          <span>Un producto de</span>
+          <span class="text-slate-400 font-semibold">CK Soluciones</span>
+        </div>
+      </div>
+
+      <!-- Product -->
+      <div>
+        <div class="text-white font-semibold text-sm mb-4">Producto</div>
+        <ul class="space-y-2.5 text-slate-500 text-sm">
+          <li><a href="how-it-works/index.html" class="hover:text-slate-300 transition-colors">Cómo funciona</a></li>
+          <li><a href="whatsapp-property-management/index.html" class="hover:text-slate-300 transition-colors">WhatsApp IA</a></li>
+          <li><a href="amenity-reservations/index.html" class="hover:text-slate-300 transition-colors">Reservas</a></li>
+          <li><a href="resident-request-automation/index.html" class="hover:text-slate-300 transition-colors">Automatización</a></li>
+          <li><a href="property-management-automation/index.html" class="hover:text-slate-300 transition-colors">Flujos de trabajo</a></li>
+          <li><a href="ai-knowledge-base/index.html" class="hover:text-slate-300 transition-colors">Base de conocimiento IA</a></li>
+          <li><a href="security/index.html" class="hover:text-slate-300 transition-colors">Seguridad</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources -->
+      <div>
+        <div class="text-white font-semibold text-sm mb-4">Recursos</div>
+        <ul class="space-y-2.5 text-slate-500 text-sm">
+          <li><a href="blog/index.html" class="hover:text-slate-300 transition-colors">Blog</a></li>
+          <li><a href="blog/ai-for-property-management/index.html" class="hover:text-slate-300 transition-colors">IA para Administración</a></li>
+          <li><a href="blog/automating-resident-requests/index.html" class="hover:text-slate-300 transition-colors">Automatizar Solicitudes</a></li>
+          <li><a href="blog/whatsapp-for-residential-communities/index.html" class="hover:text-slate-300 transition-colors">WhatsApp Residencial</a></li>
+          <li><a href="blog/digital-amenity-reservations/index.html" class="hover:text-slate-300 transition-colors">Reservas Digitales</a></li>
+          <li><a href="ai-property-management/index.html" class="hover:text-slate-300 transition-colors">IA Inmobiliaria</a></li>
+        </ul>
+      </div>
+
+      <!-- Company -->
+      <div>
+        <div class="text-white font-semibold text-sm mb-4">Empresa</div>
+        <ul class="space-y-2.5 text-slate-500 text-sm">
+          <li><a href="about/index.html" class="hover:text-slate-300 transition-colors">Sobre CK Soluciones</a></li>
+          <li><a href="contact/index.html" class="hover:text-slate-300 transition-colors">Contacto</a></li>
+          <li><a href="demo/index.html" class="hover:text-slate-300 transition-colors">Solicitar demo</a></li>
+          <li><a href="property-management-software/index.html" class="hover:text-slate-300 transition-colors">Software de Administración</a></li>
+          <li><a href="privacy-policy/index.html" class="hover:text-slate-300 transition-colors">Política de Privacidad</a></li>
+          <li><a href="terms-and-conditions/index.html" class="hover:text-slate-300 transition-colors">Términos y Condiciones</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <hr class="sep mb-8" />
+
+    <div class="flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-600">
+      <div>© 2025 VecinoAI · CK Soluciones · Todos los derechos reservados</div>
+      <div class="flex items-center gap-6">
+        <a href="privacy-policy/index.html" class="hover:text-slate-400 transition-colors">Privacidad</a>
+        <a href="terms-and-conditions/index.html" class="hover:text-slate-400 transition-colors">Términos</a>
+        <a href="property-management-software/index.html" class="hover:text-slate-400 transition-colors">Software Administración</a>
+        <a href="ai-property-management/index.html" class="hover:text-slate-400 transition-colors">IA Inmobiliaria</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================================================ -->
+<!-- JAVASCRIPT: scroll reveal + nav shrink -->
+<!-- ============================================================ -->
+<script>
+  // Intersection observer for fade-up animations
+  const observer = new IntersectionObserver(
+    (entries) => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+    { threshold: 0.1 }
+  );
+  document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const target = document.querySelector(a.getAttribute('href'));
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  });
+</script>
+
 </body>
 </html>

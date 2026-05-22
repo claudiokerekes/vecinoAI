@@ -25,13 +25,22 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Compilar Tailwind CSS
+        run: |
+          npm ci
+          npm run build:css
+          echo "✅ Tailwind compilado → $(wc -c < assets/css/tailwind.css) bytes"
+
       - name: Inyectar secrets
         run: |
           sed -i "s|__WEB3FORMS_KEY__|${{ secrets.WEB3FORMS_KEY }}|g" demo/index.html
           echo "✅ WEB3FORMS_KEY inyectada"
-
-          sed -i "s|__GA4_ID__|${{ secrets.GA4_ID }}|g" assets/js/shared.js
-          echo "✅ GA4_ID inyectada"
 
           if [ -n "${{ secrets.FACEBOOK_PIXEL_ID }}" ]; then
             sed -i "s|__FACEBOOK_PIXEL_ID__|${{ secrets.FACEBOOK_PIXEL_ID }}|g" assets/js/shared.js
