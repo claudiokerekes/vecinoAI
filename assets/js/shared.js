@@ -17,15 +17,20 @@
 
 // ── Facebook Pixel ────────────────────────────────────────────────────────────
 (function () {
-  var FB_ID = '__FACEBOOK_PIXEL_ID__';
-  if (!FB_ID || FB_ID === '__FACEBOOK_PIXEL_ID__') return; // sin ID aún
   !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
   n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
   n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
   t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
   document,'script','https://connect.facebook.net/en_US/fbevents.js');
-  window.fbq('init', FB_ID);
+  window.fbq('init', '1646636346569890');
   window.fbq('track', 'PageView');
+  // Noscript fallback — lo inyectamos en el body
+  var ns = document.createElement('noscript');
+  var img = document.createElement('img');
+  img.height = 1; img.width = 1; img.style.display = 'none';
+  img.src = 'https://www.facebook.com/tr?id=1646636346569890&ev=PageView&noscript=1';
+  ns.appendChild(img);
+  document.body && document.body.appendChild(ns);
 })();
 
 // ── Scroll depth (25 / 50 / 75 / 100 %) ─────────────────────────────────────
@@ -58,7 +63,7 @@
 function trackEvent(eventName, params) {
   if (window.gtag) window.gtag('event', eventName, params || {});
   if (window.fbq) {
-    if (eventName === 'whatsapp_click')  window.fbq('track', 'Contact');
+    if (eventName === 'whatsapp_click')   window.fbq('track', 'Contact');
     if (eventName === 'form_submit_demo') window.fbq('track', 'Lead');
   }
 }

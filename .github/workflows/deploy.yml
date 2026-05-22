@@ -42,13 +42,6 @@ jobs:
           sed -i "s|__WEB3FORMS_KEY__|${{ secrets.WEB3FORMS_KEY }}|g" demo/index.html
           echo "✅ WEB3FORMS_KEY inyectada"
 
-          if [ -n "${{ secrets.FACEBOOK_PIXEL_ID }}" ]; then
-            sed -i "s|__FACEBOOK_PIXEL_ID__|${{ secrets.FACEBOOK_PIXEL_ID }}|g" assets/js/shared.js
-            echo "✅ FACEBOOK_PIXEL_ID inyectada"
-          else
-            echo "⬜ FACEBOOK_PIXEL_ID no configurada aún — se omite"
-          fi
-
       - name: Setup Pages
         uses: actions/configure-pages@v4
 
