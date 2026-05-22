@@ -240,6 +240,14 @@ document.addEventListener('click', function (e) {
   document.addEventListener('DOMContentLoaded', function () {
     document.head.insertAdjacentHTML('beforeend', STYLES);
 
+    // Favicon para subpáginas
+    if (!document.querySelector('link[rel="icon"]')) {
+      var fav = document.createElement('link');
+      fav.rel = 'icon'; fav.type = 'image/svg+xml';
+      fav.href = u('favicon.svg');
+      document.head.appendChild(fav);
+    }
+
     const navPh    = document.getElementById('nav-ph');
     const footerPh = document.getElementById('footer-ph');
     if (navPh)    navPh.outerHTML    = NAV;
