@@ -292,6 +292,22 @@ document.addEventListener('click', function (e) {
       fav.href = u('favicon.svg');
       document.head.appendChild(fav);
     }
+    // og:image para todas las páginas
+    if (!document.querySelector('meta[property="og:image"]')) {
+      var metas = [
+        ['og:image',        'https://vecinoai.co/og-image.png'],
+        ['og:image:width',  '1200'],
+        ['og:image:height', '630'],
+        ['og:image:alt',    'VecinoAI — IA para administración de propiedades'],
+        ['twitter:image',   'https://vecinoai.co/og-image.png'],
+        ['twitter:card',    'summary_large_image'],
+      ];
+      metas.forEach(function(m) {
+        var tag = document.createElement('meta');
+        tag.setAttribute('property', m[0]); tag.content = m[1];
+        document.head.appendChild(tag);
+      });
+    }
 
     const navPh    = document.getElementById('nav-ph');
     const footerPh = document.getElementById('footer-ph');
