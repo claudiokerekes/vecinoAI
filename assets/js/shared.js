@@ -126,34 +126,79 @@ document.addEventListener('click', function (e) {
   // ── Nav ───────────────────────────────────────────────────────────────────
   const NAV = `
 <nav class="nav-blur" style="position:fixed;top:0;left:0;right:0;z-index:50">
-  <div style="max-width:1280px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between">
-    <a href="${u('index.html')}" style="display:flex;align-items:center;gap:10px;text-decoration:none" aria-label="VecinoAI inicio">
-      <div style="width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#6366f1,#a855f7);display:flex;align-items:center;justify-content:center;flex-shrink:0">
+  <div style="max-width:1280px;margin:0 auto;padding:14px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px">
+
+    <!-- Logo -->
+    <a href="${u('index.html')}" style="display:flex;align-items:center;gap:10px;text-decoration:none;flex-shrink:0" aria-label="VecinoAI inicio">
+      <div style="width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg,#6366f1,#a855f7);display:flex;align-items:center;justify-content:center">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
       </div>
       <span style="font-weight:700;font-size:18px;color:white;letter-spacing:-0.5px">VecinoAI</span>
     </a>
-    <div style="display:none;align-items:center;gap:32px;font-size:14px;font-weight:500" class="md-nav">
+
+    <!-- Links desktop -->
+    <div id="nav-links" style="display:none;align-items:center;gap:28px;font-size:14px;font-weight:500">
       <a href="${u('how-it-works/index.html')}" style="color:#94a3b8;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#94a3b8'">Cómo funciona</a>
       <a href="${u('amenity-reservations/index.html')}" style="color:#94a3b8;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#94a3b8'">Reservas</a>
       <a href="${u('ai-knowledge-base/index.html')}" style="color:#94a3b8;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#94a3b8'">IA Contextual</a>
       <a href="${u('blog/index.html')}" style="color:#94a3b8;text-decoration:none" onmouseover="this.style.color='white'" onmouseout="this.style.color='#94a3b8'">Blog</a>
     </div>
-    <div style="display:flex;align-items:center;gap:12px">
-      <a href="${u('demo/index.html')}" class="btn-ghost" style="font-size:14px;padding:10px 20px;display:none" id="nav-demo-ghost">Ver demo</a>
-      <a href="${u('demo/index.html')}" class="btn-primary" style="font-size:14px;padding:10px 20px">
+
+    <!-- CTA desktop + hamburger mobile -->
+    <div style="display:flex;align-items:center;gap:10px;flex-shrink:0">
+      <a id="nav-cta" href="${u('demo/index.html')}" style="display:none;background:linear-gradient(135deg,#6366f1,#4f46e5);color:white;padding:9px 18px;border-radius:8px;font-weight:600;font-size:14px;text-decoration:none;white-space:nowrap">
         Solicitar demo
-        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
+      <!-- Hamburger (solo mobile) -->
+      <button id="nav-toggle" aria-label="Abrir menú" style="display:flex;flex-direction:column;gap:5px;background:none;border:1px solid rgba(99,102,241,0.35);border-radius:8px;padding:9px 10px;cursor:pointer">
+        <span class="bar" style="display:block;width:20px;height:2px;background:#a5b4fc;border-radius:2px;transition:all .25s"></span>
+        <span class="bar" style="display:block;width:20px;height:2px;background:#a5b4fc;border-radius:2px;transition:all .25s"></span>
+        <span class="bar" style="display:block;width:20px;height:2px;background:#a5b4fc;border-radius:2px;transition:all .25s"></span>
+      </button>
     </div>
   </div>
+
+  <!-- Drawer mobile -->
+  <div id="nav-drawer" style="display:none;flex-direction:column;gap:4px;padding:12px 20px 20px;border-top:1px solid rgba(99,102,241,0.12)">
+    <a href="${u('how-it-works/index.html')}" style="color:#cbd5e1;text-decoration:none;font-size:16px;font-weight:500;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05)">Cómo funciona</a>
+    <a href="${u('amenity-reservations/index.html')}" style="color:#cbd5e1;text-decoration:none;font-size:16px;font-weight:500;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05)">Reservas</a>
+    <a href="${u('ai-knowledge-base/index.html')}" style="color:#cbd5e1;text-decoration:none;font-size:16px;font-weight:500;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05)">IA Contextual</a>
+    <a href="${u('blog/index.html')}" style="color:#cbd5e1;text-decoration:none;font-size:16px;font-weight:500;padding:12px 0;border-bottom:1px solid rgba(255,255,255,0.05)">Blog</a>
+    <a href="${u('demo/index.html')}" style="margin-top:12px;background:linear-gradient(135deg,#6366f1,#4f46e5);color:white;padding:14px 20px;border-radius:10px;font-weight:700;font-size:15px;text-decoration:none;text-align:center">Solicitar demo →</a>
+  </div>
 </nav>
+
 <style>
   @media(min-width:768px){
-    .md-nav{display:flex!important}
-    #nav-demo-ghost{display:inline-flex!important}
+    #nav-links { display:flex !important }
+    #nav-cta   { display:block !important }
+    #nav-toggle{ display:none  !important }
+    #nav-drawer{ display:none  !important }
   }
-</style>`;
+</style>
+
+<script>
+(function(){
+  var btn    = document.getElementById('nav-toggle');
+  var drawer = document.getElementById('nav-drawer');
+  var bars   = document.querySelectorAll('#nav-toggle .bar');
+  var open   = false;
+  if(!btn) return;
+  btn.addEventListener('click', function(){
+    open = !open;
+    drawer.style.display = open ? 'flex' : 'none';
+    // Animación X
+    bars[0].style.transform = open ? 'translateY(7px) rotate(45deg)'  : '';
+    bars[1].style.opacity   = open ? '0' : '1';
+    bars[2].style.transform = open ? 'translateY(-7px) rotate(-45deg)' : '';
+  });
+  // Cerrar al hacer clic en un link del drawer
+  drawer.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ open=false; drawer.style.display='none';
+      bars[0].style.transform=''; bars[1].style.opacity='1'; bars[2].style.transform=''; });
+  });
+})();
+</script>`;
 
   // ── Footer ────────────────────────────────────────────────────────────────
   const FOOTER = `
