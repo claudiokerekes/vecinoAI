@@ -244,9 +244,10 @@ document.addEventListener('click', function (e) {
     <!-- Links desktop (centro) -->
     <div id="vai-links">
       <a href="${u('how-it-works/index.html')}">Cómo funciona</a>
+      <a href="${u('property-management-software/index.html')}">Software</a>
       <a href="${u('amenity-reservations/index.html')}">Reservas</a>
-      <a href="${u('ai-knowledge-base/index.html')}">IA Contextual</a>
       <a href="${u('blog/index.html')}">Blog</a>
+      <a href="${u('index.html')}#precios">Precios</a>
     </div>
 
     <!-- Derecha: CTA desktop + hamburger mobile -->
@@ -267,9 +268,10 @@ document.addEventListener('click', function (e) {
   <!-- Drawer mobile -->
   <div id="vai-drawer" role="menu">
     <a class="vai-dlink" href="${u('how-it-works/index.html')}" role="menuitem">Cómo funciona</a>
+    <a class="vai-dlink" href="${u('property-management-software/index.html')}" role="menuitem">Software</a>
     <a class="vai-dlink" href="${u('amenity-reservations/index.html')}" role="menuitem">Reservas</a>
-    <a class="vai-dlink" href="${u('ai-knowledge-base/index.html')}" role="menuitem">IA Contextual</a>
     <a class="vai-dlink" href="${u('blog/index.html')}" role="menuitem">Blog</a>
+    <a class="vai-dlink" href="${u('index.html')}#precios" role="menuitem">Precios</a>
     <a class="vai-dcta" href="${u('demo/index.html')}" role="menuitem">Solicitar demo →</a>
   </div>
 </nav>
@@ -319,7 +321,7 @@ document.addEventListener('click', function (e) {
           </div>
           <span style="font-weight:700;font-size:18px;color:white">VecinoAI</span>
         </a>
-        <p style="color:#64748b;font-size:14px;line-height:1.7;max-width:280px;margin-bottom:12px">El asistente de inteligencia artificial para administración de propiedades residenciales. Un producto de CK Soluciones.</p>
+        <p style="color:#64748b;font-size:14px;line-height:1.7;max-width:280px;margin-bottom:12px">La plataforma centralizada de operaciones e IA para administración de copropiedades horizontales. Un producto de CK Soluciones.</p>
         <span style="color:#475569;font-size:12px">Un producto de <strong style="color:#94a3b8">CK Soluciones</strong></span>
       </div>
 
@@ -327,13 +329,11 @@ document.addEventListener('click', function (e) {
         <div style="color:white;font-weight:600;font-size:14px;margin-bottom:16px">Producto</div>
         <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px">
           ${[
-            ['how-it-works/index.html',              'Cómo funciona'],
+            ['how-it-works/index.html',               'Cómo funciona'],
+            ['property-management-software/index.html','Software PH'],
             ['whatsapp-property-management/index.html','WhatsApp IA'],
-            ['amenity-reservations/index.html',       'Reservas'],
-            ['resident-request-automation/index.html','Automatización'],
-            ['property-management-automation/index.html','Flujos de trabajo'],
-            ['ai-knowledge-base/index.html',          'Base de conocimiento IA'],
-            ['security/index.html',                   'Seguridad'],
+            ['amenity-reservations/index.html',        'Reservas'],
+            ['security/index.html',                    'Seguridad'],
           ].map(([path, label]) =>
             `<li><a href="${u(path)}" style="color:#64748b;font-size:14px;text-decoration:none" onmouseover="this.style.color='#cbd5e1'" onmouseout="this.style.color='#64748b'">${label}</a></li>`
           ).join('\n          ')}

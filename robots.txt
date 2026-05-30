@@ -1,9 +1,41 @@
 User-agent: *
 Allow: /
 
+# Excluir páginas sin valor SEO (empresa)
+Disallow: /about
+Disallow: /contact
+
 # Excluir páginas legales del índice de Google
 Disallow: /privacy-policy
 Disallow: /terms-and-conditions
 
+# Crawl-delay para evitar sobrecarga
+Crawl-delay: 1
+
+# Permitir crawlers de IA (ChatGPT, Perplexity, Claude, Gemini, etc.)
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
 # Sitemap
 Sitemap: https://vecinoai.co/sitemap.xml
+
+# Archivo para LLMs
+# llms.txt: https://vecinoai.co/llms.txt
